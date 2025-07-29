@@ -37,8 +37,7 @@ listing:
 :::
 
 # ComplexHeatmap
-In this section, we'll use `ggalign` to draw all the heatmap in
-<https://jokergoo.github.io/ComplexHeatmap-reference/book/index.html>. 
+Reproducing heatmaps from the [ComplexHeatmap book](https://jokergoo.github.io/ComplexHeatmap-reference/book/index.html) using `ggalign`.
 
 :::{#complexheatmap}
 :::
