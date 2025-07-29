@@ -46,8 +46,15 @@ knitr:
 format:
   html:
     theme:
-      light: [flatly]
-      dark: [darkly]
+      light:
+        - cosmo
+        - assets/silvia-theme-light.scss
+        - assets/silvia/colors-light.scss
+        - assets/silvia/fonts.scss
+      dark: 
+        - cosmo
+        - assets/silvia-theme-dark.scss
+        - assets/silvia/colors-dark.scss
     respect-user-color-scheme: true
     code-link: true
     code-annotations: hover
