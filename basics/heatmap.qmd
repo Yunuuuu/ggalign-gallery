@@ -21,5 +21,5 @@ ggheatmap(mat)
 ```
 
 ```{r}
-ggheatmap(mat) + scale_color_viridis_c()
+ggheatmap(mat) + scale_fill_viridis_c()
 ```
