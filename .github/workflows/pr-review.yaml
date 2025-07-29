@@ -1,0 +1,67 @@
+on:
+  pull_request:
+    branches: [main, master]
+
+name: Render the new Quarto files
+
+# https://github.com/r-lib/actions/tree/v2/examples#render-rmarkdown
+# https://github.com/quarto-dev/quarto-actions
+
+env:
+  isExtPR: ${{ github.event.pull_request.head.repo.fork == true }}
+  RUST_BACKTRACE: 1
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tinytex: true
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+
+      - name: Get the new quarto files
+        id: new-qmd-files
+        uses: tj-actions/changed-files@v46.0.5 # v46
+        with:
+          files: |
+            **.Qmd
+            **.qmd
+
+      - name: Render the new quarto files
+        if: steps.new-qmd-files.outputs.any_changed == 'true'
+        env:
+          QMD_FILES: ${{ steps.new-qmd-files.outputs.all_changed_files }}
+        run: |
+          mkdir -p _QMD_RENDER_REVIEW
+          mkdir -p _QMD_RENDER_WORKING_DIR
+          for file in ${QMD_FILES}; do
+            myfile=$(basename "$file")
+            myname="${myfile%.*}" # remove file extension
+            mkdir -p "_QMD_RENDER_REVIEW/$myname"
+            cp "$file" "_QMD_RENDER_WORKING_DIR/$myfile"
+            echo "Rendering $file"
+            quarto render "_QMD_RENDER_WORKING_DIR/$myfile" --to html --execute-dir .
+            mv _QMD_RENDER_WORKING_DIR/* "_QMD_RENDER_REVIEW/$myname/"
+          done
+
+      - name: Upload Quarto artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          path: _QMD_RENDER_REVIEW
+          if-no-files-found: "ignore"

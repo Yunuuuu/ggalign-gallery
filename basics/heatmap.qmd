@@ -1,0 +1,25 @@
+# Heatmap
+
+```{r}
+library(ggalign)
+```
+
+
+```{r}
+set.seed(123)
+# Prepare heatmap matrix
+mat <- matrix(
+    rnorm(200, mean = 5, sd = 2),
+    nrow = 20, ncol = 10,
+    dimnames = list(paste0("G", 1:20), paste0("S", 1:10))
+)
+```
+
+```{r}
+#| class-output: preview-image
+ggheatmap(mat)
+```
+
+```{r}
+ggheatmap(mat) + scale_color_viridis_c()
+```
