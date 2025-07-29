@@ -32,21 +32,21 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Basics\n\n\n\n\n\n\n\n\nHeatmap\n\n\n\n\n\n\n\n\n\n\nHeatmap with hannotations\n\n\n\n\n\nNo matching items\n\n\n\nAdvanced\n\n\n\n\nNo matching items\n\n\n\nComplexHeatmap\nIn this section, we’ll use ggalign to draw all the heatmap in https://jokergoo.github.io/ComplexHeatmap-reference/book/index.html.\n\n\n\n\nNo matching items"
+    "text": "Basics\n\n\n\n\n\n\n\n\nHeatmap\n\n\n\n\n\n\n\n\n\n\nHeatmap with annotations\n\n\n\n\n\nNo matching items\n\n\n\nAdvanced\n\n\n\n\nNo matching items\n\n\n\nComplexHeatmap\nIn this section, we’ll use ggalign to draw all the heatmap in https://jokergoo.github.io/ComplexHeatmap-reference/book/index.html.\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "basics.html",
     "href": "basics.html",
     "title": "Basics",
     "section": "",
-    "text": "Heatmap\n\n\n\n\n\n\n\n\n\n\nHeatmap with hannotations\n\n\n\n\n\nNo matching items"
+    "text": "Heatmap\n\n\n\n\n\n\n\n\n\n\nHeatmap with annotations\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "basics/heatmap-with-annotations.html",
     "href": "basics/heatmap-with-annotations.html",
-    "title": "Heatmap with hannotations",
+    "title": "Heatmap with annotations",
     "section": "",
-    "text": "Heatmap with hannotations\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) +\n    scale_fill_viridis_c() +\n    anno_right(size = 0.3) +\n    align_dendro() +\n    anno_left(size = 0.3) +\n    ggalign(rowSums) +\n    geom_bar(aes(x = value, y = .y, fill = value),\n        orientation = \"y\", stat = \"identity\"\n    ) +\n    scale_fill_viridis_c(option = \"A\")\n#&gt; → heatmap built with `geom_tile()`"
+    "text": "Heatmap with annotations\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) +\n    scale_fill_viridis_c() +\n    anno_right(size = 0.3) +\n    align_dendro() +\n    anno_left(size = 0.3) +\n    ggalign(rowSums) +\n    geom_bar(aes(x = value, y = .y, fill = value),\n        orientation = \"y\", stat = \"identity\"\n    ) +\n    scale_fill_viridis_c(option = \"A\")\n#&gt; → heatmap built with `geom_tile()`"
   },
   {
     "objectID": "complexheatmap/single-heatmap.html",
