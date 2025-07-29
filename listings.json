@@ -1,8 +1,16 @@
 [
   {
+    "listing": "/index.html",
+    "items": [
+      "/basics/heatmap.html",
+      "/basics/heatmap-with-annotations.html"
+    ]
+  },
+  {
     "listing": "/basics.html",
     "items": [
-      "/basics/heatmap.html"
+      "/basics/heatmap.html",
+      "/basics/heatmap-with-annotations.html"
     ]
   }
 ]
