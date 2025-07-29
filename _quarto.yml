@@ -18,6 +18,7 @@ website:
     logo: "cover.png"
     logo-alt: ggalign
     left:
+      - href: index.qmd
       - text: Basics
         href: basics.qmd
 
