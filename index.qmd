@@ -17,8 +17,8 @@ listing:
     categories: false
     fields: [title, image]
 
-  - id: complexHeatmap
-    contents: complexHeatmap
+  - id: complexheatmap
+    contents: complexheatmap
     type: grid
     sort-ui: false
     filter-ui: false
@@ -40,5 +40,5 @@ listing:
 In this section, we'll use `ggalign` to draw all the heatmap in
 <https://jokergoo.github.io/ComplexHeatmap-reference/book/index.html>. 
 
-:::{#complexHeatmap}
+:::{#complexheatmap}
 :::
