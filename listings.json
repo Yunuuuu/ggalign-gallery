@@ -3,7 +3,9 @@
     "listing": "/index.html",
     "items": [
       "/basics/heatmap.html",
-      "/basics/heatmap-with-annotations.html"
+      "/basics/heatmap-with-annotations.html",
+      "/complexheatmap/single-heatmap.html",
+      "/complexheatmap/more-examples.html"
     ]
   },
   {

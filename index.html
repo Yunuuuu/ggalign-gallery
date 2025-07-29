@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-complexHeatmap .list');
+    const listingTargetEl = window.document.querySelector('#listing-complexheatmap .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -142,11 +142,11 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-complexHeatmap'] = new List('listing-complexHeatmap', options);
+    window['quarto-listings']['listing-complexheatmap'] = new List('listing-complexheatmap', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -436,7 +436,7 @@ window.Quarto = {
 <h1>Basics</h1>
 <div id="listing-basics" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1753819227180" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1753819723654" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
 <a href="./basics/heatmap.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="basics/heatmap_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -447,7 +447,7 @@ Heatmap
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1753819227180" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1753819723654" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
 <a href="./basics/heatmap-with-annotations.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="basics/heatmap-with-annotations_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -474,9 +474,30 @@ Heatmap with annotations
 <section id="complexheatmap" class="level1">
 <h1>ComplexHeatmap</h1>
 <p>In this section, we’ll use <code>ggalign</code> to draw all the heatmap in <a href="https://jokergoo.github.io/ComplexHeatmap-reference/book/index.html" class="uri">https://jokergoo.github.io/ComplexHeatmap-reference/book/index.html</a>.</p>
-<div id="listing-complexHeatmap" class="quarto-listing quarto-listing-container-grid">
+<div id="listing-complexheatmap" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1753819723654" data-listing-reading-time-sort="18" data-listing-word-count-sort="3415">
+<a href="./complexheatmap/single-heatmap.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="complexheatmap/single-heatmap_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title" data-anchor-id="complexheatmap">
+A Single Heatmap
+</h5>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1753819723654" data-listing-reading-time-sort="5" data-listing-word-count-sort="882">
+<a href="./complexheatmap/more-examples.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="complexheatmap/more-examples_files/figure-html/unnamed-chunk-1-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+More examples
+</h5>
+</div>
+</div></a>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
