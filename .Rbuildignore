@@ -1,0 +1,8 @@
+^\.github$
+^_site$
+^\.Rproj\.user$
+^\.Rhistory$
+^ggalign-gallery\.Rproj$
+^\.radian_history$
+^\.quarto$
+^Scratch\.RConsole$

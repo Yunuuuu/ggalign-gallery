@@ -1,4 +1,5 @@
 ---
+repo-actions: false
 title: "Basics"
 listing:
   contents: basics

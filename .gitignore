@@ -1,4 +1,7 @@
-/.Rbuildignore
-/.radian_history
-/Scratch.RConsole
+_site/
+.Rproj.user
+.Rhistory
+ggalign-gallery.Rproj
+.radian_history
+Scratch.RConsole
 /.quarto/
