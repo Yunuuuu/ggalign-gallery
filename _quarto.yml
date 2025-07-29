@@ -42,7 +42,9 @@ knitr:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: [cosmo, theme.scss]
+      dark: [cosmo, theme-dark.scss]
     code-link: true
     code-annotations: hover
     mermaid:
