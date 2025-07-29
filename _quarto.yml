@@ -6,7 +6,7 @@ project:
 engine: knitr
 
 website:
-  title: "ggalign Gallery"
+  title: Gallery
   favicon: cover.png
   repo-url: https://github.com/Yunuuuu/ggalign-gallery
   repo-branch: main
@@ -16,6 +16,7 @@ website:
   navbar:
     search: true
     logo: "cover.png"
+    logo-alt: ggalign
     left:
       - text: Basics
         href: basics.qmd

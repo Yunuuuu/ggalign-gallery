@@ -1,0 +1,28 @@
+# Heatmap with hannotations
+
+```{r}
+library(ggalign)
+```
+
+```{r}
+set.seed(123)
+mat <- matrix(
+    rnorm(100, mean = 0, sd = 2),
+    nrow = 10, ncol = 10,
+    dimnames = list(paste0("G", 1:10), paste0("S", 1:10))
+)
+```
+
+```{r}
+#| class-output: preview-image
+ggheatmap(mat) +
+    scale_fill_viridis_c() +
+    anno_right(size = 0.3) +
+    align_dendro() +
+    anno_left(size = 0.3) +
+    ggalign(rowSums) +
+    geom_bar(aes(x = value, y = .y, fill = value),
+        orientation = "y", stat = "identity"
+    ) +
+    scale_fill_viridis_c(option = "A")
+```
