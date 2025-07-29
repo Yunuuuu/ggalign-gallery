@@ -4,7 +4,6 @@
 library(ggalign)
 ```
 
-
 ```{r}
 set.seed(123)
 # Prepare heatmap matrix
@@ -16,10 +15,10 @@ mat <- matrix(
 ```
 
 ```{r}
-#| class-output: preview-image
 ggheatmap(mat)
 ```
 
 ```{r}
+#| class-output: preview-image
 ggheatmap(mat) + scale_fill_viridis_c()
 ```

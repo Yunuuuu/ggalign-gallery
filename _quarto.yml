@@ -19,6 +19,7 @@ website:
     left:
       - text: Basics
         href: basics.qmd
+
     tools:
       - icon: code-square
         text: ggalign repo
@@ -26,7 +27,7 @@ website:
       - icon: journal-text
         text: ggalign reference
         href: https://yunuuuu.github.io/ggalign
-      - icon: journal-text
+      - icon: book
         text: ggalign tutorial
         href: https://yunuuuu.github.io/ggalign-book
       - icon: layout-text-sidebar-reverse
