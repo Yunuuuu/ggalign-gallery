@@ -1,4 +1,4 @@
-# Heatmap with hannotations
+# Heatmap with annotations
 
 ```{r}
 library(ggalign)
