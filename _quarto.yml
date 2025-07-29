@@ -48,6 +48,7 @@ format:
     theme:
       light: [default]
       dark: [default]
+    respect-user-color-scheme: true
     code-link: true
     code-annotations: hover
     mermaid:
