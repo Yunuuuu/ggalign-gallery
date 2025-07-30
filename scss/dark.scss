@@ -170,6 +170,7 @@ pre code {
   background-color: $body-bg;
   color: $primary;
   border-color: $primary;
+  text-transform: none !important;
   &:hover {
     background-color: $primary;
     color: $body-bg;
@@ -180,6 +181,7 @@ pre code {
 .listing-category {
   color: $secondary !important;
   border-color: $secondary !important;
+  text-transform: none !important;
   &:hover {
     background-color: $secondary;
     color: white !important;

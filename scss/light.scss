@@ -160,6 +160,7 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   background-color: $primary;
   color: white;
   border-color: $primary;
+  text-transform: none !important;
   &:hover {
     background-color: white;
     color: $primary;
@@ -170,6 +171,7 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 .listing-category {
   color: $secondary !important;
   border-color: $secondary !important;
+  text-transform: none !important;
   &:hover {
     background-color: $secondary;
     color: white !important;
