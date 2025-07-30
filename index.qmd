@@ -18,6 +18,15 @@ listing:
     categories: false
     fields: [title, date, image]
 
+  - id: real-world-data
+    type: grid
+    image-height: 100%
+    contents: real-world-data
+    sort-ui: false
+    filter-ui: false
+    categories: false
+    fields: [title, date, image]
+
   - id: complexheatmap
     type: grid
     image-height: 100%
@@ -36,6 +45,11 @@ listing:
 # Advanced
 
 :::{#advanced}
+:::
+
+# Real World Data
+
+:::{#real-world-data}
 :::
 
 # ComplexHeatmap

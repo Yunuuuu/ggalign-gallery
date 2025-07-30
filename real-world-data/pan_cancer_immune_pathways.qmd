@@ -1,0 +1,84 @@
+# Disturbance of Immune-Related Pathways between Normal and Tumor Tissues in Pan-cancer
+Data was downloaded from https://pmc.ncbi.nlm.nih.gov/articles/PMC9856581/#app1-cancers-15-00342
+
+We randomly selected 5 pathways for simplicity. The data preparation code is
+collapsed in the source but can be expanded for inspection.
+```{r}
+#| code-fold: true
+# Read data from the supplementary Excel file
+data <- readxl::read_xlsx(
+    "rawdata/circular/Supplementary tables.xlsx",
+    skip = 1L
+)
+set.seed(3L)
+
+# Randomly select 5 pathways (rows 2–18 cover the main data)
+selected <- sample(2:18, 5)
+
+# Extract logFC and adjusted p-values for the selected pathways
+logFC <- data[selected, c(1, which(as.character(data[1, ]) == "logFC"))]
+adj.P <- data[selected, c(1, which(as.character(data[1, ]) == "adj.P"))]
+names(adj.P) <- names(logFC)
+
+# Convert to numeric matrix: pathways as columns, tumor as rows
+logFC <- dplyr::mutate(logFC, dplyr::across(!pathway, as.numeric)) |>
+    tibble::column_to_rownames(var = "pathway") |>
+    as.matrix() |>
+    t()
+adj.P <- dplyr::mutate(adj.P, dplyr::across(!pathway, as.numeric)) |>
+    tibble::column_to_rownames(var = "pathway") |>
+    as.matrix() |>
+    t()
+```
+
+```{r}
+circle_discrete(logFC,
+    radial = coord_radial(start = pi / 2, end = pi * 2, expand = FALSE),
+    theme = theme(
+        plot.margin = margin(l = 5, t = 5, b = 6, unit = "mm"),
+        legend.box.spacing = unit(5, "mm")
+    ),
+    sector_spacing = 5 * pi / 180
+) +
+    # Align dendrogram above the radial sectors, cluster conditions into 5 groups
+    align_dendro(aes(color = branch), k = 5L, size = 1) +
+    theme_no_axes("y") +
+    scale_color_brewer(
+        palette = "Dark2",
+        guide = guide_legend(theme = theme(
+            legend.text = element_text(size = 18),
+            legend.title = element_text(face = "bold", size = 16)
+        ))
+    ) +
+
+    # add heatmap plot
+    ggalign(mapping = aes(y = .column_names, fill = value)) +
+    geom_tile(width = 1, height = 1) +
+    geom_text(aes(label = "*"), data = function(dd) {
+        dd$pvalue <- adj.P[cbind(dd$.row_index, dd$.column_index)]
+        dplyr::filter(dd, pvalue < 0.05)
+    }) +
+    scale_fill_gradient2(
+        low = "blue", high = "red",
+        name = "logFC",
+        limits = c(-1, 1),
+        breaks = c(-0.5, 0, 0.5),
+        guide = guide_colorbar(theme = theme(
+            legend.text = element_text(size = 18),
+            legend.title = element_text(face = "bold", size = 16)
+        ))
+    ) +
+    theme(
+        axis.text.r = element_text(family = "Helvetica", size = 22),
+        axis.text.theta = element_text(family = "Helvetica", size = 15)
+    ) +
+    guides(
+        r = "none", r.sec = "axis",
+        theta = guide_axis_theta(angle = 0)
+    ) &
+    theme(
+        text = element_text(family = "Helvetica"),
+        legend.text = element_text(size = 12),
+        legend.title = element_text(face = "bold", size = 14)
+    )
+```

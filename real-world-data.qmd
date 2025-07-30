@@ -1,0 +1,10 @@
+---
+listing:
+  type: grid
+  image-height: 100%
+  contents: real-world-data
+  sort-ui: false
+  filter-ui: false
+  categories: false
+  fields: [title, date, image]
+---
