@@ -1,3 +1,7 @@
+---
+categories: [quad_layout(), ggheatmap()]
+---
+
 # Heatmap
 
 ```{r}
@@ -15,6 +19,5 @@ mat <- matrix(
 ```
 
 ```{r}
-#| class-output: preview-image
-ggheatmap(mat) + scale_fill_viridis_c()
+ggheatmap(mat)
 ```

@@ -1,3 +1,7 @@
+---
+categories: [quad_layout(), ggheatmap()]
+---
+
 # Measles Vaccine Heatmap
 
 We utilize the measles vaccine dataset included in the R `ComplexHeatmap`

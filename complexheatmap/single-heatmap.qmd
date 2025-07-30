@@ -1,3 +1,7 @@
+---
+categories: [quad_layout(), ggheatmap()]
+---
+
 # A Single Heatmap
 In this thread, we'll use `ggalign` to draw all the heatmap in
 <https://jokergoo.github.io/ComplexHeatmap-reference/book/a-single-heatmap.html>

@@ -1,3 +1,7 @@
+---
+categories: [quad_layout(), ggheatmap()]
+---
+
 # Heatmap of gene expression matrix
 
 We utilize the gene expression dataset included in the R `ComplexHeatmap`

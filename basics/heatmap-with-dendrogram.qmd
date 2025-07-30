@@ -1,3 +1,7 @@
+---
+categories: [quad_layout(), ggheatmap()]
+---
+
 # Heatmap with dendrogram
 
 ```{r}

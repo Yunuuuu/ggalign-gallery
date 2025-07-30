@@ -1,3 +1,7 @@
+---
+categories: [quad_layout(), ggoncoplot()]
+---
+
 # Oncoplot of TCGA LAML Mutation Data
 We utilize the TCGA LAML mutation dataset included in the R `maftools` package.
 
