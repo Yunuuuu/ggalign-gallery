@@ -29,6 +29,10 @@ adj.P <- dplyr::mutate(adj.P, dplyr::across(!pathway, as.numeric)) |>
 ```
 
 ```{r}
+library(ggalign)
+```
+
+```{r}
 circle_discrete(logFC,
     radial = coord_radial(start = pi / 2, end = pi * 2, expand = FALSE),
     theme = theme(
