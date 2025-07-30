@@ -6,13 +6,16 @@ project:
 engine: knitr
 
 website:
-  title: "gallery"
+  title: gallery
   favicon: cover.png
   repo-url: https://github.com/Yunuuuu/ggalign-gallery
   repo-branch: main
   repo-actions: ["source", "edit", "issue"]
   reader-mode: true
   twitter-card: true
+  open-graph:
+    title: ggalign gallery
+
   navbar:
     search: true
     logo: "cover.png"
