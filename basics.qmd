@@ -5,6 +5,6 @@ listing:
   contents: basics
   sort-ui: false
   filter-ui: false
-  categories: false
-  fields: [title, date, image]
+  categories: true
+  fields: [title, date, image, description, categories]
 ---
