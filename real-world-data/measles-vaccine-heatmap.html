@@ -367,8 +367,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="measles-vaccine-heatmap" class="level1">
 <h1>Measles Vaccine Heatmap</h1>
-<p>We utilize the measles vaccine dataset included in the R <code>ComplexHeatmap</code> package to reproduce the figure from https://jokergoo.github.io/ComplexHeatmap-reference/book/more-examples.html</p>
+<p>We utilize the measles vaccine dataset included in the R <code>ComplexHeatmap</code> package to reproduce the figure from <a href="https://jokergoo.github.io/ComplexHeatmap-reference/book/more-examples.html" class="uri">https://jokergoo.github.io/ComplexHeatmap-reference/book/more-examples.html</a>.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggalign)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Loading required package: ggplot2</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
@@ -376,6 +378,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     element_polygon</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> mat <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(</span>
