@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-07-30">
 
 <title>gallery</title>
 <style>
@@ -86,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-date','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -142,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-date','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -415,17 +416,38 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 30, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <section id="basics" class="level1">
 <h1>Basics</h1>
 <div id="listing-basics" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1753856248690" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1753857243000" data-listing-file-modified-sort="1753857243913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
 <a href="./basics/heatmap.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="basics/heatmap_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -433,10 +455,15 @@ window.Quarto = {
 <h5 class="no-anchor card-title listing-title" data-anchor-id="basics">
 Heatmap
 </h5>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 30, 2025
+</div>
+</div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1753856248690" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<div class="g-col-1" data-index="1" data-listing-date-sort="1753857243000" data-listing-file-modified-sort="1753857243913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
 <a href="./basics/heatmap-with-annotations.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="basics/heatmap-with-annotations_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -444,10 +471,15 @@ Heatmap
 <h5 class="no-anchor card-title listing-title">
 Heatmap with annotations
 </h5>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 30, 2025
+</div>
+</div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1753856248690" data-listing-reading-time-sort="1" data-listing-word-count-sort="66">
+<div class="g-col-1" data-index="2" data-listing-date-sort="1753857243000" data-listing-file-modified-sort="1753857243913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="66">
 <a href="./basics/heatmap-dendrogram.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="basics/heatmap-dendrogram_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -455,6 +487,11 @@ Heatmap with annotations
 <h5 class="no-anchor card-title listing-title">
 Heatmap with dendrogram
 </h5>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 30, 2025
+</div>
+</div>
 </div>
 </div></a>
 </div>
@@ -476,7 +513,7 @@ Heatmap with dendrogram
 <p>Reproducing heatmaps from the <a href="https://jokergoo.github.io/ComplexHeatmap-reference/book/index.html">ComplexHeatmap book</a> using <code>ggalign</code>.</p>
 <div id="listing-complexheatmap" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1753856248690" data-listing-reading-time-sort="18" data-listing-word-count-sort="3415">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1753857243000" data-listing-file-modified-sort="1753857243913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3415">
 <a href="./complexheatmap/single-heatmap.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="complexheatmap/single-heatmap_files/figure-html/unnamed-chunk-2-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -484,10 +521,15 @@ Heatmap with dendrogram
 <h5 class="no-anchor card-title listing-title" data-anchor-id="complexheatmap">
 A Single Heatmap
 </h5>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 30, 2025
+</div>
+</div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1753856248690" data-listing-reading-time-sort="5" data-listing-word-count-sort="882">
+<div class="g-col-1" data-index="1" data-listing-date-sort="1753857243000" data-listing-file-modified-sort="1753857243913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="882">
 <a href="./complexheatmap/more-examples.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="complexheatmap/more-examples_files/figure-html/unnamed-chunk-1-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -495,6 +537,11 @@ A Single Heatmap
 <h5 class="no-anchor card-title listing-title">
 More examples
 </h5>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 30, 2025
+</div>
+</div>
 </div>
 </div></a>
 </div>
