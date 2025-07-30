@@ -1,24 +1,26 @@
 [
   {
-    "listing": "/basics.html",
-    "items": [
-      "/basics/heatmap.html",
-      "/basics/heatmap-with-group-variables.html",
-      "/basics/heatmap-with-kmeans.html",
-      "/basics/heatmap-with-annotations.html",
-      "/basics/heatmap-with-dendrogram.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/basics/heatmap.html",
       "/basics/heatmap-with-group-variables.html",
       "/basics/heatmap-with-kmeans.html",
+      "/basics/heatmap-with-ordering-weights.html",
       "/basics/heatmap-with-annotations.html",
       "/basics/heatmap-with-dendrogram.html",
       "/complexheatmap/single-heatmap.html",
       "/complexheatmap/more-examples.html"
+    ]
+  },
+  {
+    "listing": "/basics.html",
+    "items": [
+      "/basics/heatmap.html",
+      "/basics/heatmap-with-group-variables.html",
+      "/basics/heatmap-with-kmeans.html",
+      "/basics/heatmap-with-ordering-weights.html",
+      "/basics/heatmap-with-annotations.html",
+      "/basics/heatmap-with-dendrogram.html"
     ]
   }
 ]
