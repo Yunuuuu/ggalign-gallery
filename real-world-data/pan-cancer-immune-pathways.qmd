@@ -6,10 +6,7 @@ collapsed in the source but can be expanded for inspection.
 ```{r}
 #| code-fold: true
 # Read data from the supplementary Excel file
-data <- readxl::read_xlsx(
-    "rawdata/circular/Supplementary tables.xlsx",
-    skip = 1L
-)
+data <- readxl::read_xlsx("rawdata/pan-cancer-immune-pathways.xlsx", skip = 1L)
 set.seed(3L)
 
 # Randomly select 5 pathways (rows 2–18 cover the main data)
