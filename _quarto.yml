@@ -53,4 +53,3 @@ format:
     code-annotations: hover
     mermaid:
       theme: default
-    lightbox: false
