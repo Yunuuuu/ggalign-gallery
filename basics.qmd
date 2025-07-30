@@ -1,10 +1,9 @@
 ---
-title: "Basics"
 listing:
   contents: basics
   type: grid
   sort-ui: false
   filter-ui: false
   categories: false
-  fields: [title, image]
+  fields: [title, date, image]
 ---

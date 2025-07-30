@@ -6,7 +6,7 @@ listing:
     sort-ui: false
     filter-ui: false
     categories: false
-    fields: [title, image]
+    fields: [title, date, image]
 
   - id: advanced
     contents: advanced
@@ -14,7 +14,7 @@ listing:
     sort-ui: false
     filter-ui: false
     categories: false
-    fields: [title, image]
+    fields: [title, date, image]
 
   - id: complexheatmap
     contents: complexheatmap
@@ -22,7 +22,7 @@ listing:
     sort-ui: false
     filter-ui: false
     categories: false
-    fields: [title, image]
+    fields: [title, date, image]
 ---
 
 # Basics
