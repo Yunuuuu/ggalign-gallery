@@ -28,18 +28,25 @@
     "text": "Heatmap\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) + scale_fill_viridis_c()\n#&gt; → heatmap built with `geom_tile()`"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Basics",
+    "objectID": "basics/heatmap-dendrogram.html",
+    "href": "basics/heatmap-dendrogram.html",
+    "title": "Heatmap with dendrogram",
     "section": "",
-    "text": "Basics\n\n\n\n\n\n\n\n\nHeatmap\n\n\n\n\n\n\n\n\n\n\nHeatmap with annotations\n\n\n\n\n\nNo matching items\n\n\n\nAdvanced\n\n\n\n\nNo matching items\n\n\n\nComplexHeatmap\nReproducing heatmaps from the ComplexHeatmap book using ggalign.\n\n\n\n\n\n\n\n\nA Single Heatmap\n\n\n\n\n\n\n\n\n\n\nMore examples\n\n\n\n\n\nNo matching items"
+    "text": "Heatmap with dendrogram\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) +\n    anno_top() +\n    align_dendro(aes(color = branch), k = 3) +\n    geom_point(aes(color = branch, y = y)) +\n    scale_color_brewer(palette = \"Dark2\")\n#&gt; → heatmap built with `geom_tile()`"
   },
   {
     "objectID": "basics.html",
     "href": "basics.html",
     "title": "gallery",
     "section": "",
-    "text": "Heatmap\n\n\n\n\n\n\n\n\n\n\nHeatmap with annotations\n\n\n\n\n\nNo matching items"
+    "text": "Heatmap\n\n\n\n\n\n\n\n\n\n\nHeatmap with annotations\n\n\n\n\n\n\n\n\n\n\nHeatmap with dendrogram\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Basics",
+    "section": "",
+    "text": "Basics\n\n\n\n\n\n\n\n\nHeatmap\n\n\n\n\n\n\n\n\n\n\nHeatmap with annotations\n\n\n\n\n\n\n\n\n\n\nHeatmap with dendrogram\n\n\n\n\n\nNo matching items\n\n\n\nAdvanced\n\n\n\n\nNo matching items\n\n\n\nComplexHeatmap\nReproducing heatmaps from the ComplexHeatmap book using ggalign.\n\n\n\n\n\n\n\n\nA Single Heatmap\n\n\n\n\n\n\n\n\n\n\nMore examples\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "basics/heatmap-with-annotations.html",
