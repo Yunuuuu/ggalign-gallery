@@ -37,6 +37,8 @@ website:
 
 bibliography: references.bib
 
+date: last-modified
+
 knitr:
   opts_chunk: 
     collapse: true
