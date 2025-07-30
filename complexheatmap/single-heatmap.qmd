@@ -3,10 +3,12 @@ In this thread, we'll use `ggalign` to draw all the heatmap in
 <https://jokergoo.github.io/ComplexHeatmap-reference/book/a-single-heatmap.html>
 
 ```{r setup}
+#| code-fold: true
 library(ggalign)
 ```
 
 ```{r}
+#| code-fold: true
 set.seed(123)
 nr1 <- 4
 nr2 <- 8
@@ -570,22 +572,4 @@ ggheatmap(mat) +
     quad_active() -
     with_quad(theme(strip.text = element_text()), "tr") &
     theme(plot.margin = margin())
-```
-
-### Titles for splitting (facet strip text)
-By default, the facet strip text is removed. You can override this behavior with
-`theme(strip.text = element_text())`. Since `align_group()` does not create a
-new plot, the panel title can only be added to the heatmap plot.
-
-waiting for complete ...
-
-### Graphic parameters for splitting
-```{r}
-ggh4x::facet_grid2(strip = ggh4x::strip_themed(
-    background_x = list(
-        element_rect(fill = "red"),
-        element_rect(fill = "blue"),
-        element_rect(fill = "green")
-    )
-))
 ```

@@ -29,6 +29,7 @@ adj.P <- dplyr::mutate(adj.P, dplyr::across(!pathway, as.numeric)) |>
 ```
 
 ```{r}
+#| code-fold: true
 library(ggalign)
 ```
 
