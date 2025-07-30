@@ -6,7 +6,7 @@ project:
 engine: knitr
 
 website:
-  title: Gallery
+  title: "gallery"
   favicon: cover.png
   repo-url: https://github.com/Yunuuuu/ggalign-gallery
   repo-branch: main
@@ -18,7 +18,6 @@ website:
     logo: "cover.png"
     logo-alt: ggalign
     left:
-      - href: index.qmd
       - text: Basics
         href: basics.qmd
 
@@ -46,8 +45,8 @@ knitr:
 format:
   html:
     theme:
-      light: [flatly, scss/light.scss]
-      dark: [darkly, scss/dark.scss]
+      light: [cosmo, scss/light.scss]
+      dark: [cosmo, scss/dark.scss]
     respect-user-color-scheme: true
     code-link: true
     code-annotations: hover
