@@ -1,24 +1,24 @@
 ---
 listing:
   - id: basics
+    template: gallery.ejs
     contents: basics
-    type: grid
     sort-ui: false
     filter-ui: false
     categories: false
     fields: [title, date, image]
 
   - id: advanced
+    template: gallery.ejs
     contents: advanced
-    type: grid
     sort-ui: false
     filter-ui: false
     categories: false
     fields: [title, date, image]
 
   - id: complexheatmap
+    template: gallery.ejs
     contents: complexheatmap
-    type: grid
     sort-ui: false
     filter-ui: false
     categories: false

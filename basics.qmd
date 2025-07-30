@@ -1,7 +1,7 @@
 ---
 listing:
+  template: gallery.ejs
   contents: basics
-  type: grid
   sort-ui: false
   filter-ui: false
   categories: false
