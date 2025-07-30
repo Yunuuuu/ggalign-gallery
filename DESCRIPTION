@@ -12,6 +12,8 @@ RoxygenNote: 7.3.2
 Imports: 
     rmarkdown,
     ggalign,
+    downlit,
+    xml2,
     ggrastr,
     ragg,
     magick,
