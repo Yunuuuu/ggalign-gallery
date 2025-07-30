@@ -19,6 +19,11 @@ website:
   comments:
     giscus: 
       repo: Yunuuuu/ggalign-gallery
+      repo-id: R_kgDOPU41Yg
+      category: Announcements
+      category-id: DIC_kwDOPU41Ys4CtmMQ
+      reactions-enabled: true
+      loading: lazy
 
   navbar:
     search: true
