@@ -24,6 +24,9 @@ website:
       category-id: DIC_kwDOPU41Ys4CtmMQ
       reactions-enabled: true
       loading: lazy
+      theme:
+        light: light # giscus theme used for light website theme
+        dark: dark   # giscus theme used for dark website theme
 
   navbar:
     search: true
