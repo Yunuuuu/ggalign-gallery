@@ -6,5 +6,5 @@ listing:
   sort-ui: false
   filter-ui: false
   categories: true
-  fields: [title, date, image, description, categories]
+  fields: [title, date, image, categories]
 ---

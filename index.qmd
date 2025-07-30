@@ -7,7 +7,7 @@ listing:
     sort-ui: false
     filter-ui: false
     categories: true
-    fields: [title, date, image, description, categories]
+    fields: [title, date, image, categories]
 
   - id: advanced
     type: grid
@@ -16,7 +16,7 @@ listing:
     sort-ui: false
     filter-ui: false
     categories: true
-    fields: [title, date, image, description, categories]
+    fields: [title, date, image, categories]
 
   - id: real-world-data
     type: grid
@@ -25,7 +25,7 @@ listing:
     sort-ui: false
     filter-ui: false
     categories: true
-    fields: [title, date, image, description, categories]
+    fields: [title, date, image, categories]
 
   - id: complexheatmap
     type: grid
@@ -34,7 +34,7 @@ listing:
     sort-ui: false
     filter-ui: false
     categories: true
-    fields: [title, date, image, description, categories]
+    fields: [title, date, image, categories]
 ---
 
 # Basics
