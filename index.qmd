@@ -1,5 +1,6 @@
 ---
 comments: false
+title-block-style: none
 listing:
   - id: basics
     type: grid
