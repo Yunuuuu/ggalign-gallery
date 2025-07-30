@@ -33,6 +33,14 @@ website:
       - icon: layout-text-sidebar-reverse
         text: ggalign manuscript
         href: https://www.biorxiv.org/content/10.1101/2025.02.06.636847v1
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://github.com/Yunuuuu/ggalign-gallery
+          - text: Report a Bug
+            href:  https://github.com/Yunuuuu/ggalign-gallery/issues
+          - text: ggalign repo
+            href:  https://github.com/Yunuuuu/ggalign
 
 bibliography: references.bib
 
