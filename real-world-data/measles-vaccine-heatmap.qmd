@@ -10,6 +10,8 @@ library(ggalign)
 ```
 
 ```{r}
+#| fig-height: 10
+#| fig-width: 14
 mat <- mat <- readRDS(
     system.file("extdata", "measles.rds", package = "ComplexHeatmap")
 )

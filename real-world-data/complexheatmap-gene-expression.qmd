@@ -23,7 +23,9 @@ mat_scaled <- t(apply(mat, 1, scale))
 type <- gsub("s\\d+_", "", colnames(mat))
 ```
 
-```{r fig.dim = c(12, 10)}
+```{r}
+#| fig-width: 12
+#| fig-height: 10
 heat1 <- ggheatmap(mat_scaled) -
     scheme_align(free_spaces = "l") +
     scale_y_continuous(breaks = NULL) +
