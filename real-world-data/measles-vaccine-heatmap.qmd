@@ -2,7 +2,7 @@
 
 We utilize the measles vaccine dataset included in the R `ComplexHeatmap`
 package to reproduce the figure from
-https://jokergoo.github.io/ComplexHeatmap-reference/book/more-examples.html
+<https://jokergoo.github.io/ComplexHeatmap-reference/book/more-examples.html>.
 
 ```{r}
 #| code-fold: true
