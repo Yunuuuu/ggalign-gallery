@@ -20,7 +20,7 @@ new_laml <- maftools::subsetMaf(laml,
 ```
 
 ```{r}
-oncoplot <- ggoncoplot(
+ggoncoplot(
     new_laml,
     n_top = 10, collapse_vars = FALSE, filling = FALSE,
     remove_empty_samples = FALSE
@@ -133,9 +133,4 @@ oncoplot <- ggoncoplot(
         text = element_text(family = "Helvetica"),
         plot.background = element_blank()
     )
-ggsave(
-    "figures/gallery/oncoplot.pdf",
-    plot = oncoplot, family = "Helvetica",
-    width = 9, height = 6
-)
 ```
