@@ -85,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -141,7 +141,7 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -360,7 +360,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -395,7 +397,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1753893727000" data-listing-file-modified-sort="1753893727074" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="335">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1753894072000" data-listing-file-modified-sort="1753894072004" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="335">
 <a href="./real-world-data/pan-cancer-immune-pathways.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="real-world-data/pan-cancer-immune-pathways_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -403,6 +405,9 @@ window.Quarto = {
 <h5 class="no-anchor card-title listing-title">
 Disturbance of Immune-Related Pathways between Normal and Tumor Tissues in Pan-cancer
 </h5>
+<div class="card-text listing-description delink">
+Data was downloaded from https://pmc.ncbi.nlm.nih.gov/articles/PMC9856581/#app1-cancers-15-00342
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 30, 2025
@@ -411,7 +416,7 @@ Jul 30, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1753893727000" data-listing-file-modified-sort="1753893727074" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="709">
+<div class="g-col-1" data-index="1" data-listing-date-sort="1753894072000" data-listing-file-modified-sort="1753894072004" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="709">
 <a href="./real-world-data/complexheatmap-gene-expression.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="real-world-data/complexheatmap-gene-expression_files/figure-html/unnamed-chunk-2-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -419,6 +424,9 @@ Jul 30, 2025
 <h5 class="no-anchor card-title listing-title">
 Heatmap of gene expression matrix
 </h5>
+<div class="card-text listing-description delink">
+We utilize the gene expression dataset included in the R <code>ComplexHeatmap</code> package to reproduce the multi-panel gene expression heatmap from https://jokergoo.github.io/ComplexHe…
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 30, 2025
@@ -427,7 +435,7 @@ Jul 30, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1753893727000" data-listing-file-modified-sort="1753893727074" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="219">
+<div class="g-col-1" data-index="2" data-listing-date-sort="1753894072000" data-listing-file-modified-sort="1753894072004" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="219">
 <a href="./real-world-data/measles-vaccine-heatmap.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="real-world-data/measles-vaccine-heatmap_files/figure-html/unnamed-chunk-2-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -435,6 +443,9 @@ Jul 30, 2025
 <h5 class="no-anchor card-title listing-title">
 Measles Vaccine Heatmap
 </h5>
+<div class="card-text listing-description delink">
+We utilize the measles vaccine dataset included in the R <code>ComplexHeatmap</code> package to reproduce the figure from https://jokergoo.github.io/ComplexHeatmap-reference/book/more-exa…
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 30, 2025
@@ -443,7 +454,7 @@ Jul 30, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1753893727000" data-listing-file-modified-sort="1753893727074" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="886">
+<div class="g-col-1" data-index="3" data-listing-date-sort="1753894072000" data-listing-file-modified-sort="1753894072004" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="886">
 <a href="./real-world-data/tcga-laml-oncoplot.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="real-world-data/tcga-laml-oncoplot_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -451,6 +462,9 @@ Jul 30, 2025
 <h5 class="no-anchor card-title listing-title">
 Oncoplot of TCGA LAML Mutation Data
 </h5>
+<div class="card-text listing-description delink">
+We utilize the TCGA LAML mutation dataset included in the R <code>maftools</code> package.
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 30, 2025

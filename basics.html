@@ -85,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -141,7 +141,7 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -360,7 +360,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -395,7 +397,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1753893727000" data-listing-file-modified-sort="1753893727072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1753894072000" data-listing-file-modified-sort="1753894072001" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
 <a href="./basics/heatmap.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="basics/heatmap_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -403,6 +405,18 @@ window.Quarto = {
 <h5 class="no-anchor card-title listing-title">
 Heatmap
 </h5>
+<div class="card-text listing-description delink">
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu">library</span>(ggalign)</span>
+<span id="cb1-2"><span class="co">#&gt; Loading required package: ggplot2</span></span>
+<span id="cb1-3"><span class="co">#&gt; </span></span>
+<span id="cb1-4"><span class="co">#&gt; Attaching package: 'ggalign'</span></span>
+<span id="cb1-5"><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
+<span id="cb1-6"><span class="co">#&gt; </span></span>
+<span id="cb1-7"><span class="co">#&gt;    …</span></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu"></span><span class="dv"></span></span><span id="cb2-2"><span class="co"></span></span><span id="cb2-3"><span class="ot"></span><span class="fu"></span></span><span id="cb2-4"><span class="fu"></span><span class="dv"></span><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-5"><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-6"><span class="at"></span><span class="fu"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span></span><span id="cb2-7"></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu"></span><span class="sc"></span><span class="fu"></span></span><span id="cb3-2"><span class="co"></span></span></code></pre></div><div class="cell-output-display"><div><figure class="figure"><p></p></figure></div></div></div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 30, 2025
@@ -411,7 +425,7 @@ Jul 30, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1753893727000" data-listing-file-modified-sort="1753893727072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="48">
+<div class="g-col-1" data-index="1" data-listing-date-sort="1753894072000" data-listing-file-modified-sort="1753894072001" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="48">
 <a href="./basics/heatmap-with-group-variables.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="basics/heatmap-with-group-variables_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -419,6 +433,18 @@ Jul 30, 2025
 <h5 class="no-anchor card-title listing-title">
 Heatmap with Group variables
 </h5>
+<div class="card-text listing-description delink">
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu">library</span>(ggalign)</span>
+<span id="cb1-2"><span class="co">#&gt; Loading required package: ggplot2</span></span>
+<span id="cb1-3"><span class="co">#&gt; </span></span>
+<span id="cb1-4"><span class="co">#&gt; Attaching package: 'ggalign'</span></span>
+<span id="cb1-5"><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
+<span id="cb1-6"><span class="co">#&gt; </span></span>
+<span id="cb1-7"><span class="co">#&gt;    …</span></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu"></span><span class="dv"></span></span><span id="cb2-2"><span class="co"></span></span><span id="cb2-3"><span class="ot"></span><span class="fu"></span></span><span id="cb2-4"><span class="fu"></span><span class="dv"></span><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-5"><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-6"><span class="at"></span><span class="fu"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span></span><span id="cb2-7"></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu"></span><span class="sc"></span></span><span id="cb3-2"><span class="fu"></span><span class="sc"></span></span><span id="cb3-3"><span class="fu"></span><span class="fu"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span><span class="fu"></span><span class="at"></span><span class="cn"></span></span><span id="cb3-4"><span class="co"></span></span></code></pre></div><div class="cell-output-display"><div><figure class="figure"><p></p></figure></div></div></div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 30, 2025
@@ -427,7 +453,7 @@ Jul 30, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1753893727000" data-listing-file-modified-sort="1753893727072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
+<div class="g-col-1" data-index="2" data-listing-date-sort="1753894072000" data-listing-file-modified-sort="1753894072001" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
 <a href="./basics/heatmap-with-kmeans.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="basics/heatmap-with-kmeans_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -435,6 +461,18 @@ Jul 30, 2025
 <h5 class="no-anchor card-title listing-title">
 Heatmap with Kmeans
 </h5>
+<div class="card-text listing-description delink">
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu">library</span>(ggalign)</span>
+<span id="cb1-2"><span class="co">#&gt; Loading required package: ggplot2</span></span>
+<span id="cb1-3"><span class="co">#&gt; </span></span>
+<span id="cb1-4"><span class="co">#&gt; Attaching package: 'ggalign'</span></span>
+<span id="cb1-5"><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
+<span id="cb1-6"><span class="co">#&gt; </span></span>
+<span id="cb1-7"><span class="co">#&gt;    …</span></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu"></span><span class="dv"></span></span><span id="cb2-2"><span class="co"></span></span><span id="cb2-3"><span class="ot"></span><span class="fu"></span></span><span id="cb2-4"><span class="fu"></span><span class="dv"></span><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-5"><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-6"><span class="at"></span><span class="fu"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span></span><span id="cb2-7"></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu"></span><span class="sc"></span></span><span id="cb3-2"><span class="fu"></span><span class="sc"></span></span><span id="cb3-3"><span class="fu"></span><span class="dv"></span></span><span id="cb3-4"><span class="co"></span></span></code></pre></div><div class="cell-output-display"><div><figure class="figure"><p></p></figure></div></div></div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 30, 2025
@@ -443,7 +481,7 @@ Jul 30, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1753893727000" data-listing-file-modified-sort="1753893727072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
+<div class="g-col-1" data-index="3" data-listing-date-sort="1753894072000" data-listing-file-modified-sort="1753894072001" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
 <a href="./basics/heatmap-with-ordering-weights.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="basics/heatmap-with-ordering-weights_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -451,6 +489,18 @@ Jul 30, 2025
 <h5 class="no-anchor card-title listing-title">
 Heatmap with Ordering weights
 </h5>
+<div class="card-text listing-description delink">
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu">library</span>(ggalign)</span>
+<span id="cb1-2"><span class="co">#&gt; Loading required package: ggplot2</span></span>
+<span id="cb1-3"><span class="co">#&gt; </span></span>
+<span id="cb1-4"><span class="co">#&gt; Attaching package: 'ggalign'</span></span>
+<span id="cb1-5"><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
+<span id="cb1-6"><span class="co">#&gt; </span></span>
+<span id="cb1-7"><span class="co">#&gt;    …</span></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu"></span><span class="dv"></span></span><span id="cb2-2"><span class="co"></span></span><span id="cb2-3"><span class="ot"></span><span class="fu"></span></span><span id="cb2-4"><span class="fu"></span><span class="dv"></span><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-5"><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-6"><span class="at"></span><span class="fu"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span></span><span id="cb2-7"></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu"></span><span class="sc"></span></span><span id="cb3-2"><span class="fu"></span><span class="sc"></span></span><span id="cb3-3"><span class="fu"></span></span><span id="cb3-4"><span class="co"></span></span></code></pre></div><div class="cell-output-display"><div><figure class="figure"><p></p></figure></div></div></div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 30, 2025
@@ -459,7 +509,7 @@ Jul 30, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-date-sort="1753893727000" data-listing-file-modified-sort="1753893727072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<div class="g-col-1" data-index="4" data-listing-date-sort="1753894072000" data-listing-file-modified-sort="1753894072001" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
 <a href="./basics/heatmap-with-annotations.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="basics/heatmap-with-annotations_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -467,6 +517,18 @@ Jul 30, 2025
 <h5 class="no-anchor card-title listing-title">
 Heatmap with annotations
 </h5>
+<div class="card-text listing-description delink">
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu">library</span>(ggalign)</span>
+<span id="cb1-2"><span class="co">#&gt; Loading required package: ggplot2</span></span>
+<span id="cb1-3"><span class="co">#&gt; </span></span>
+<span id="cb1-4"><span class="co">#&gt; Attaching package: 'ggalign'</span></span>
+<span id="cb1-5"><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
+<span id="cb1-6"><span class="co">#&gt; </span></span>
+<span id="cb1-7"><span class="co">#&gt;    …</span></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu"></span><span class="dv"></span></span><span id="cb2-2"><span class="ot"></span><span class="fu"></span></span><span id="cb2-3"><span class="fu"></span><span class="dv"></span><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-4"><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-5"><span class="at"></span><span class="fu"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span></span><span id="cb2-6"></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu"></span><span class="sc"></span></span><span id="cb3-2"><span class="fu"></span><span class="sc"></span></span><span id="cb3-3"><span class="fu"></span><span class="at"></span><span class="fl"></span><span class="sc"></span></span><span id="cb3-4"><span class="fu"></span><span class="sc"></span></span><span id="cb3-5"><span class="fu"></span><span class="at"></span><span class="fl"></span><span class="sc"></span></span><span id="cb3-6"><span class="fu"></span><span class="sc"></span></span><span id="cb3-7"><span class="fu"></span><span class="fu"></span><span class="at"></span><span class="at"></span><span class="at"></span></span><span id="cb3-8"><span class="at"></span><span class="st"></span><span class="at"></span><span class="st"></span></span><span id="cb3-9"><span class="sc"></span></span><span id="cb3-10"><span class="fu"></span><span class="at"></span><span class="st"></span></span><span id="cb3-11"><span class="co"></span></span></code></pre></div><div class="cell-output-display"><div><figure class="figure"><p></p></figure></div></div></div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 30, 2025
@@ -475,7 +537,7 @@ Jul 30, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-listing-date-sort="1753893727000" data-listing-file-modified-sort="1753893727072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="66">
+<div class="g-col-1" data-index="5" data-listing-date-sort="1753894072000" data-listing-file-modified-sort="1753894072001" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="66">
 <a href="./basics/heatmap-with-dendrogram.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="basics/heatmap-with-dendrogram_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
@@ -483,6 +545,18 @@ Jul 30, 2025
 <h5 class="no-anchor card-title listing-title">
 Heatmap with dendrogram
 </h5>
+<div class="card-text listing-description delink">
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu">library</span>(ggalign)</span>
+<span id="cb1-2"><span class="co">#&gt; Loading required package: ggplot2</span></span>
+<span id="cb1-3"><span class="co">#&gt; </span></span>
+<span id="cb1-4"><span class="co">#&gt; Attaching package: 'ggalign'</span></span>
+<span id="cb1-5"><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
+<span id="cb1-6"><span class="co">#&gt; </span></span>
+<span id="cb1-7"><span class="co">#&gt;    …</span></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu"></span><span class="dv"></span></span><span id="cb2-2"><span class="co"></span></span><span id="cb2-3"><span class="ot"></span><span class="fu"></span></span><span id="cb2-4"><span class="fu"></span><span class="dv"></span><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-5"><span class="at"></span><span class="dv"></span><span class="at"></span><span class="dv"></span></span><span id="cb2-6"><span class="at"></span><span class="fu"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span><span class="fu"></span><span class="st"></span><span class="dv"></span><span class="sc"></span><span class="dv"></span></span><span id="cb2-7"></span></code></pre></div></div><div class="cell"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu"></span><span class="sc"></span></span><span id="cb3-2"><span class="fu"></span><span class="sc"></span></span><span id="cb3-3"><span class="fu"></span><span class="fu"></span><span class="at"></span><span class="at"></span><span class="dv"></span><span class="sc"></span></span><span id="cb3-4"><span class="fu"></span><span class="fu"></span><span class="at"></span><span class="at"></span><span class="sc"></span></span><span id="cb3-5"><span class="fu"></span><span class="at"></span><span class="st"></span></span><span id="cb3-6"><span class="co"></span></span></code></pre></div><div class="cell-output-display"><div><figure class="figure"><p></p></figure></div></div></div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 30, 2025
