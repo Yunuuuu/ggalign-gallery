@@ -1,4 +1,5 @@
 ---
+comments: false
 listing:
   - id: basics
     type: grid

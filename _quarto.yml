@@ -16,6 +16,10 @@ website:
   open-graph:
     title: ggalign gallery
 
+  comments:
+    giscus: 
+      repo: Yunuuuu/ggalign-gallery
+
   navbar:
     search: true
     logo: "cover.png"
