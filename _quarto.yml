@@ -8,6 +8,7 @@ engine: knitr
 website:
   title: gallery
   favicon: cover.png
+  site-url: https://yunuuuu.github.io/ggalign-gallery/
   repo-url: https://github.com/Yunuuuu/ggalign-gallery
   repo-branch: main
   repo-actions: ["source", "edit", "issue"]
