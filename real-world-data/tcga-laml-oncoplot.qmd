@@ -53,21 +53,22 @@ ggoncoplot(
         stat = "identity"
     ) +
     guides(fill = "none") +
-    # labs(fill = "top") +
     ylab("TMB") +
     scale_y_continuous(breaks = scales::breaks_pretty(2L)) +
 
     # add right annotation -----------------------------
-    anno_right(size = 0.2) -
+    anno_right(size = 0.4) -
     # remove bottom spaces of the right annotation when aligning
     scheme_align(free_spaces = "b") +
 
     # add the text percent for the alterated samples in the right annotation
-    ggalign(data = function(data) {
-        # Atomic vector will be put in the `value` column of the data frame.
-        ggalign_attr(data, "gene_summary")$AlteredSamples /
-            ggalign_attr(data, "n_samples")
-    }) +
+    ggalign(
+        data = function(data) {
+            # Atomic vector will be converted into a data frame.
+            ggalign_attr(data, "gene_summary")$AlteredSamples /
+                ggalign_attr(data, "n_samples")
+        }
+    ) +
     geom_text(aes(1, label = scales::label_percent()(value)),
         hjust = 1.2, size = 5, family = "Helvetica"
     ) +
@@ -95,12 +96,7 @@ ggoncoplot(
     guides(fill = "none") +
     # labs(fill = "right") +
     xlab("Variant weights") +
-    scale_x_continuous(breaks = scales::breaks_pretty(1)) +
-    theme(
-        axis.line.y = element_line(),
-        axis.text.x = element_text(size = 18),
-        axis.title.x = element_blank()
-    ) -
+    scale_x_continuous(breaks = scales::breaks_pretty(1)) -
     # we apply the scale mapping to
     # - the top and right annotation: `position = "tr"`
     # - the main plot: `main = TRUE`
@@ -124,18 +120,5 @@ ggoncoplot(
     geom_bar(aes(y = value, fill = .column_names), stat = "identity") +
     ylab("Ti/Tv") +
     scale_y_continuous(breaks = scales::breaks_pretty(3L)) +
-    scale_fill_brewer("Ti/Tv", palette = "Set2", na.translate = FALSE) -
-    with_quad(
-        theme(
-            axis.text.y = element_text(size = 18),
-            axis.title.y = element_text(size = 20, face = "bold"),
-            legend.text = element_text(size = 12, colour = "black"),
-            legend.title = element_text(size = 20)
-        )
-    ) &
-    theme(
-        plot.margin = margin(b = 5),
-        text = element_text(family = "Helvetica"),
-        plot.background = element_blank()
-    )
+    scale_fill_brewer("Ti/Tv", palette = "Set2", na.translate = FALSE)
 ```

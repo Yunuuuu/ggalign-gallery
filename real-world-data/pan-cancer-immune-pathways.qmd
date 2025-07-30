@@ -35,22 +35,12 @@ library(ggalign)
 ```{r}
 circle_discrete(logFC,
     radial = coord_radial(start = pi / 2, end = pi * 2, expand = FALSE),
-    theme = theme(
-        plot.margin = margin(l = 5, t = 5, b = 6, unit = "mm"),
-        legend.box.spacing = unit(5, "mm")
-    ),
     sector_spacing = 5 * pi / 180
 ) +
     # Align dendrogram above the radial sectors, cluster conditions into 5 groups
     align_dendro(aes(color = branch), k = 5L, size = 1) +
     theme_no_axes("y") +
-    scale_color_brewer(
-        palette = "Dark2",
-        guide = guide_legend(theme = theme(
-            legend.text = element_text(size = 18),
-            legend.title = element_text(face = "bold", size = 16)
-        ))
-    ) +
+    scale_color_brewer(palette = "Dark2") +
 
     # add heatmap plot
     ggalign(mapping = aes(y = .column_names, fill = value)) +
@@ -63,23 +53,7 @@ circle_discrete(logFC,
         low = "blue", high = "red",
         name = "logFC",
         limits = c(-1, 1),
-        breaks = c(-0.5, 0, 0.5),
-        guide = guide_colorbar(theme = theme(
-            legend.text = element_text(size = 18),
-            legend.title = element_text(face = "bold", size = 16)
-        ))
+        breaks = c(-0.5, 0, 0.5)
     ) +
-    theme(
-        axis.text.r = element_text(family = "Helvetica", size = 22),
-        axis.text.theta = element_text(family = "Helvetica", size = 15)
-    ) +
-    guides(
-        r = "none", r.sec = "axis",
-        theta = guide_axis_theta(angle = 0)
-    ) &
-    theme(
-        text = element_text(family = "Helvetica"),
-        legend.text = element_text(size = 12),
-        legend.title = element_text(face = "bold", size = 14)
-    )
+    guides(r = "none", r.sec = "axis", theta = guide_axis_theta(angle = 0))
 ```
