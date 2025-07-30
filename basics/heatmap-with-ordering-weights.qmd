@@ -15,7 +15,7 @@ mat <- matrix(
 ```
 
 ```{r}
-ggheatmap(small_mat) +
+ggheatmap(mat) +
     anno_left() +
     align_order(rowMeans)
 ```
