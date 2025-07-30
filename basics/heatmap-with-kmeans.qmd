@@ -1,5 +1,5 @@
 ---
-categories: [quad_layout(), ggheatmap()]
+categories: [ggheatmap()]
 ---
 
 # Heatmap with Kmeans

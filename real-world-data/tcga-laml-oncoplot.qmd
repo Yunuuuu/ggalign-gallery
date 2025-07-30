@@ -1,5 +1,5 @@
 ---
-categories: [quad_layout(), ggoncoplot()]
+categories: [ggoncoplot()]
 ---
 
 # Oncoplot of TCGA LAML Mutation Data
