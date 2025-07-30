@@ -3,6 +3,7 @@
     "listing": "/real-world-data.html",
     "items": [
       "/real-world-data/pan-cancer-immune-pathways.html",
+      "/real-world-data/measles-vaccine-heatmap.html",
       "/real-world-data/tcga-laml-oncoplot.html"
     ]
   },
@@ -27,6 +28,7 @@
       "/basics/heatmap-with-annotations.html",
       "/basics/heatmap-with-dendrogram.html",
       "/real-world-data/pan-cancer-immune-pathways.html",
+      "/real-world-data/measles-vaccine-heatmap.html",
       "/real-world-data/tcga-laml-oncoplot.html",
       "/complexheatmap/single-heatmap.html",
       "/complexheatmap/more-examples.html"
