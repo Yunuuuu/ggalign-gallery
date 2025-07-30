@@ -18,9 +18,7 @@ mat <- matrix(
 ```
 
 ```{r}
-#| class-output: preview-image
 ggheatmap(mat) +
-    scale_fill_viridis_c() +
     anno_right(size = 0.3) +
     align_dendro() +
     anno_left(size = 0.3) +
