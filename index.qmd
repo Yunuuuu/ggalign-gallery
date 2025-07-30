@@ -1,7 +1,8 @@
 ---
 listing:
   - id: basics
-    template: gallery.ejs
+    type: grid
+    image-height: 100%
     contents: basics
     sort-ui: false
     filter-ui: false
@@ -9,7 +10,8 @@ listing:
     fields: [title, date, image]
 
   - id: advanced
-    template: gallery.ejs
+    type: grid
+    image-height: 100%
     contents: advanced
     sort-ui: false
     filter-ui: false
@@ -17,7 +19,8 @@ listing:
     fields: [title, date, image]
 
   - id: complexheatmap
-    template: gallery.ejs
+    type: grid
+    image-height: 100%
     contents: complexheatmap
     sort-ui: false
     filter-ui: false

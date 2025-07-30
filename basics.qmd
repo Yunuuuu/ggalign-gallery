@@ -1,6 +1,7 @@
 ---
 listing:
-  template: gallery.ejs
+  type: grid
+  image-height: 100%
   contents: basics
   sort-ui: false
   filter-ui: false
