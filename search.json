@@ -4,7 +4,7 @@
     "href": "real-world-data.html",
     "title": "gallery",
     "section": "",
-    "text": "Disturbance of Immune-Related Pathways between Normal and Tumor Tissues in Pan-cancer\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap of gene expression matrix\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nMeasles Vaccine Heatmap\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nOncoplot of TCGA LAML Mutation Data\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Disturbance of Immune-Related Pathways between Normal and Tumor Tissues in Pan-cancer\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap of gene expression matrix\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nMeasles Vaccine Heatmap\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nOncoplot of TCGA LAML Mutation Data\n\n\n\nJul 30, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "basics/heatmap.html",
@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "Basics",
     "section": "",
-    "text": "Basics\n\n\n\n\n\n\n\n\nHeatmap\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Group variables\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Kmeans\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Ordering weights\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with annotations\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with dendrogram\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\nNo matching items\n\n\n\nAdvanced\n\n\n\n\nNo matching items\n\n\n\nReal World Data\n\n\n\n\n\n\n\n\nDisturbance of Immune-Related Pathways between Normal and Tumor Tissues in Pan-cancer\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap of gene expression matrix\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nMeasles Vaccine Heatmap\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nOncoplot of TCGA LAML Mutation Data\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\nNo matching items\n\n\n\nComplexHeatmap\nReproducing heatmaps from the ComplexHeatmap book using ggalign.\n\n\n\n\n\n\n\n\nA Single Heatmap\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Basics\n\n\n\n\n\n\n\n\nHeatmap\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Group variables\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Kmeans\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Ordering weights\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with annotations\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with dendrogram\n\n\n\nJul 30, 2025\n\n\n\n\n\n\nNo matching items\n\n\n\nAdvanced\n\n\n\n\nNo matching items\n\n\n\nReal World Data\n\n\n\n\n\n\n\n\nDisturbance of Immune-Related Pathways between Normal and Tumor Tissues in Pan-cancer\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap of gene expression matrix\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nMeasles Vaccine Heatmap\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nOncoplot of TCGA LAML Mutation Data\n\n\n\nJul 30, 2025\n\n\n\n\n\n\nNo matching items\n\n\n\nComplexHeatmap\nReproducing heatmaps from the ComplexHeatmap book using ggalign.\n\n\n\n\n\n\n\n\nA Single Heatmap\n\n\n\nJul 30, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "real-world-data/complexheatmap-gene-expression.html",
@@ -67,7 +67,7 @@
     "href": "basics.html",
     "title": "gallery",
     "section": "",
-    "text": "Heatmap\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Group variables\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Kmeans\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Ordering weights\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with annotations\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with dendrogram\n\n\n\n\n\n\nJul 30, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Heatmap\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Group variables\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Kmeans\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with Ordering weights\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with annotations\n\n\n\nJul 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap with dendrogram\n\n\n\nJul 30, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "basics/heatmap-with-kmeans.html",
