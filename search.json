@@ -7,32 +7,32 @@
     "text": "Disturbance of Immune-Related Pathways between Normal and Tumor Tissues in Pan-cancer\n\n\n\ncircle_layout()\n\n\n\n\nJul 31, 2025\n\n\n\n\n\n\n\n\n\n\n\nGenomic density and Rainfall plot\n\n\n\ncircle_genomic()\n\n\n\n\nJul 31, 2025\n\n\n\n\n\n\n\n\n\n\n\nHeatmap of gene expression matrix\n\n\n\nggheatmap()\n\n\n\n\nJul 31, 2025\n\n\n\n\n\n\n\n\n\n\n\nMeasles Vaccine Heatmap\n\n\n\nggheatmap()\n\n\n\n\nJul 31, 2025\n\n\n\n\n\n\n\n\n\n\n\nOncoplot of TCGA LAML Mutation Data\n\n\n\nggoncoplot()\n\n\n\n\nJul 31, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "basics/heatmap.html",
-    "href": "basics/heatmap.html",
-    "title": "Heatmap",
-    "section": "",
-    "text": "Heatmap\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat)\n#&gt; → heatmap built with `geom_tile()`"
-  },
-  {
-    "objectID": "basics/plot-composer.html",
-    "href": "basics/plot-composer.html",
-    "title": "Plot Composer",
-    "section": "",
-    "text": "Plot Composer\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nlibrary(ggplot2)\np1 &lt;- ggplot(mtcars) + \n  geom_point(aes(mpg, disp)) + \n  ggtitle('Plot 1')\n\np2 &lt;- ggplot(mtcars) + \n  geom_boxplot(aes(gear, disp, group = gear)) + \n  ggtitle('Plot 2')\n\np3 &lt;- ggplot(mtcars) + \n  geom_point(aes(hp, wt, colour = mpg)) + \n  ggtitle('Plot 3')\n\np4 &lt;- ggplot(mtcars) + \n  geom_bar(aes(gear)) + \n  facet_wrap(~cyl) + \n  ggtitle('Plot 4')\n\nCombine plots directly:\n\nalign_plots(p1, p2)\n\n\n\n\n\n\n\nBy row:\n\nalign_plots(p1, p2, ncol = 1)\n\n\n\n\n\n\n\nAlign a list of plots:\n\nalign_plots(!!!list(p1, p2, p3))\n\n\n\n\n\n\n\nSet different width for plots:\n\nalign_plots(p1, p2, widths = c(2, 1))\n\n\n\n\n\n\n\nWorks for multiple plots:\n\nalign_plots(p1, p2, p3, p4, ncol = 2, widths = c(2, 1))\n\n\n\n\n\n\n\nSet space:\n\nalign_plots(p1, NULL, p2)\n\n\n\n\n\n\n\nMore see Data-Free Composition of ggalign tutorial book."
-  },
-  {
-    "objectID": "basics/heatmap-with-ordering-weights.html",
-    "href": "basics/heatmap-with-ordering-weights.html",
-    "title": "Heatmap with Ordering Weights",
-    "section": "",
-    "text": "Heatmap with Ordering Weights\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) +\n    anno_left() +\n    align_order(rowMeans)\n#&gt; → heatmap built with `geom_tile()`"
-  },
-  {
-    "objectID": "basics/ggside-marginal-plots.html",
-    "href": "basics/ggside-marginal-plots.html",
+    "objectID": "basics/marginal-plots.html",
+    "href": "basics/marginal-plots.html",
     "title": "Marginal Plot",
     "section": "",
-    "text": "Marginal Plot\nA marginal plot is a visualization that combines a main plot (usually a scatter plot) with additional plots in the margins of the axes. These marginal plots display the distributions of the individual variables, often using histograms, box plots, or other visual representations.\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nggside(mpg, aes(displ, hwy, colour = class)) -\n    theme_bw() +\n    geom_point(size = 2) +\n    # initialize top annotation\n    anno_top(size = 0.3) +\n    # add a plot in the top annotation\n    ggalign() +\n    geom_density(aes(displ, y = after_stat(density), colour = class), position = \"stack\") +\n    # initialize right annotation\n    anno_right(size = 0.3) +\n    # add a plot in the right annotation\n    ggalign() +\n    geom_density(aes(x = after_stat(density), hwy, colour = class),\n        position = \"stack\"\n    )\n\n\n\n\n\n\n\nReproduce cases in Add marginal plots of ggpubr post.\n\nggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +\n    geom_point(size = 3, alpha = 0.6) +\n    ggsci::scale_color_jco() +\n    theme_classic() +\n    anno_top(size = 0.2) +\n    ggalign() +\n    geom_density(aes(x = Sepal.Length)) +\n    theme_no_axes() +\n    anno_right(size = 0.2) +\n    ggalign() +\n    geom_density(aes(y = Sepal.Width)) +\n    theme_no_axes()\n\n\n\n\n\n\n\n\nggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +\n    geom_point(size = 3, alpha = 0.6) +\n    ggsci::scale_color_jco() +\n    theme_classic() +\n    anno_top(size = 0.2) +\n    ggalign() +\n    geom_boxplot(aes(x = Sepal.Length), fill = \"grey\") +\n    theme_no_axes() +\n    anno_right(size = 0.2) +\n    ggalign() +\n    geom_boxplot(aes(y = Sepal.Width), fill = \"grey\") +\n    theme_no_axes()\n\n\n\n\n\n\n\n\nggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +\n    geom_point(size = 3, alpha = 0.6) +\n    ggsci::scale_color_jco() +\n    theme_light() +\n    anno_top(size = 0.2) +\n    ggalign() +\n    geom_density(aes(x = Sepal.Length, fill = Species, alpha = 0.6)) +\n    theme_no_axes() +\n    anno_right(size = 0.2) +\n    ggalign() +\n    geom_density(aes(y = Sepal.Width, fill = Species), alpha = 0.6) +\n    theme_no_axes() &\n    ggsci::scale_fill_jco() &\n    theme(legend.position = \"none\")\n\n\n\n\n\n\n\n\nggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +\n    geom_point(size = 3, alpha = 0.6) +\n    geom_smooth(method = lm) +\n    ggpubr::stat_cor() +\n    ggsci::scale_color_jco() +\n    theme_light() +\n    anno_top(size = 0.2) +\n    ggalign() +\n    geom_density(aes(x = Sepal.Length, fill = Species, alpha = 0.6)) +\n    theme_no_axes() +\n    anno_right(size = 0.2) +\n    ggalign() +\n    geom_density(aes(y = Sepal.Width, fill = Species), alpha = 0.6) +\n    theme_no_axes() &\n    ggsci::scale_fill_jco() &\n    theme(legend.position = \"none\")\n#&gt; `geom_smooth()` using formula = 'y ~ x'"
+    "text": "Marginal Plot\nA marginal plot is a visualization that combines a main plot (usually a scatter plot) with additional plots in the margins of the axes. These marginal plots display the distributions of the individual variables, often using histograms, box plots, or other visual representations.\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nggside(mpg, aes(displ, hwy, colour = class)) -\n    scheme_theme(theme_bw()) +\n    geom_point(size = 2) +\n    # initialize top annotation\n    anno_top(size = 0.3) +\n    # add a plot in the top annotation\n    ggalign() +\n    geom_density(aes(displ, y = after_stat(density), colour = class), position = \"stack\") +\n    # initialize right annotation\n    anno_right(size = 0.3) +\n    # add a plot in the right annotation\n    ggalign() +\n    geom_density(aes(x = after_stat(density), hwy, colour = class),\n        position = \"stack\"\n    )\n\n\n\n\n\n\n\nReproduce cases in Add marginal plots of ggpubr post.\n\nggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +\n    geom_point(size = 3, alpha = 0.6) +\n    ggsci::scale_color_jco() +\n    theme_classic() +\n    anno_top(size = 0.2) +\n    ggalign() +\n    geom_density(aes(x = Sepal.Length)) +\n    theme_no_axes() +\n    anno_right(size = 0.2) +\n    ggalign() +\n    geom_density(aes(y = Sepal.Width)) +\n    theme_no_axes()\n\n\n\n\n\n\n\n\nggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +\n    geom_point(size = 3, alpha = 0.6) +\n    ggsci::scale_color_jco() +\n    theme_classic() +\n    anno_top(size = 0.2) +\n    ggalign() +\n    geom_boxplot(aes(x = Sepal.Length), fill = \"grey\") +\n    theme_no_axes() +\n    anno_right(size = 0.2) +\n    ggalign() +\n    geom_boxplot(aes(y = Sepal.Width), fill = \"grey\") +\n    theme_no_axes()\n\n\n\n\n\n\n\n\nggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +\n    geom_point(size = 3, alpha = 0.6) +\n    ggsci::scale_color_jco() +\n    theme_light() +\n    anno_top(size = 0.2) +\n    ggalign() +\n    geom_density(aes(x = Sepal.Length, fill = Species, alpha = 0.6)) +\n    theme_no_axes() +\n    anno_right(size = 0.2) +\n    ggalign() +\n    geom_density(aes(y = Sepal.Width, fill = Species), alpha = 0.6) +\n    theme_no_axes() &\n    ggsci::scale_fill_jco() &\n    theme(legend.position = \"none\")\n\n\n\n\n\n\n\n\nggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +\n    geom_point(size = 3, alpha = 0.6) +\n    geom_smooth(method = lm) +\n    ggpubr::stat_cor() +\n    ggsci::scale_color_jco() +\n    theme_light() +\n    anno_top(size = 0.2) +\n    ggalign() +\n    geom_density(aes(x = Sepal.Length, fill = Species, alpha = 0.6)) +\n    theme_no_axes() +\n    anno_right(size = 0.2) +\n    ggalign() +\n    geom_density(aes(y = Sepal.Width, fill = Species), alpha = 0.6) +\n    theme_no_axes() &\n    ggsci::scale_fill_jco() &\n    theme(legend.position = \"none\")\n#&gt; `geom_smooth()` using formula = 'y ~ x'"
+  },
+  {
+    "objectID": "basics/heatmap-with-annotations.html",
+    "href": "basics/heatmap-with-annotations.html",
+    "title": "Heatmap with Annotations",
+    "section": "",
+    "text": "Heatmap with Annotations\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\nAnnotate top with color bars:\n\nggheatmap(mat) +\n    anno_top(size = unit(1, \"cm\")) +\n    align_kmeans(centers = 3L) +\n    ggalign(data = NULL) +\n    geom_tile(aes(y = 1L, fill = .panel, color = .panel)) +\n    theme_no_axes(\"y\")\n#&gt; → heatmap built with `geom_tile()`\n\n\n\n\n\n\n\nAnnotate both left and right positions:\n\nggheatmap(mat) +\n    anno_right(size = 0.3) +\n    align_dendro() +\n    anno_left(size = 0.3) +\n    ggalign(rowSums) +\n    geom_bar(aes(x = value, y = .y, fill = value),\n        orientation = \"y\", stat = \"identity\"\n    ) +\n    scale_fill_viridis_c(option = \"A\")\n#&gt; → heatmap built with `geom_tile()`"
+  },
+  {
+    "objectID": "basics/heatmap-with-group-variables.html",
+    "href": "basics/heatmap-with-group-variables.html",
+    "title": "Heatmap with Group Variables",
+    "section": "",
+    "text": "Heatmap with Group Variables\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) +\n    anno_top() +\n    align_group(sample(letters[1:4], ncol(mat), replace = TRUE))\n#&gt; → heatmap built with `geom_tile()`"
+  },
+  {
+    "objectID": "basics/heatmap-with-dendrogram.html",
+    "href": "basics/heatmap-with-dendrogram.html",
+    "title": "Heatmap with Dendrogram",
+    "section": "",
+    "text": "Heatmap with Dendrogram\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) +\n    anno_top() +\n    align_dendro(aes(color = branch), k = 3) +\n    geom_point(aes(color = branch, y = y)) +\n    scale_color_brewer(palette = \"Dark2\")\n#&gt; → heatmap built with `geom_tile()`"
   },
   {
     "objectID": "basics/heatmap-with-different-shape.html",
@@ -98,25 +98,25 @@
     "text": "Heatmap with Kmeans\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) +\n    anno_top() +\n    align_kmeans(3)\n#&gt; → heatmap built with `geom_tile()`"
   },
   {
-    "objectID": "basics/heatmap-with-dendrogram.html",
-    "href": "basics/heatmap-with-dendrogram.html",
-    "title": "Heatmap with Dendrogram",
+    "objectID": "basics/heatmap-with-ordering-weights.html",
+    "href": "basics/heatmap-with-ordering-weights.html",
+    "title": "Heatmap with Ordering Weights",
     "section": "",
-    "text": "Heatmap with Dendrogram\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) +\n    anno_top() +\n    align_dendro(aes(color = branch), k = 3) +\n    geom_point(aes(color = branch, y = y)) +\n    scale_color_brewer(palette = \"Dark2\")\n#&gt; → heatmap built with `geom_tile()`"
+    "text": "Heatmap with Ordering Weights\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) +\n    anno_left() +\n    align_order(rowMeans)\n#&gt; → heatmap built with `geom_tile()`"
   },
   {
-    "objectID": "basics/heatmap-with-group-variables.html",
-    "href": "basics/heatmap-with-group-variables.html",
-    "title": "Heatmap with Group Variables",
+    "objectID": "basics/plot-composer.html",
+    "href": "basics/plot-composer.html",
+    "title": "Plot Composer",
     "section": "",
-    "text": "Heatmap with Group Variables\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) +\n    anno_top() +\n    align_group(sample(letters[1:4], ncol(mat), replace = TRUE))\n#&gt; → heatmap built with `geom_tile()`"
+    "text": "Plot Composer\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nlibrary(ggplot2)\np1 &lt;- ggplot(mtcars) + \n  geom_point(aes(mpg, disp)) + \n  ggtitle('Plot 1')\n\np2 &lt;- ggplot(mtcars) + \n  geom_boxplot(aes(gear, disp, group = gear)) + \n  ggtitle('Plot 2')\n\np3 &lt;- ggplot(mtcars) + \n  geom_point(aes(hp, wt, colour = mpg)) + \n  ggtitle('Plot 3')\n\np4 &lt;- ggplot(mtcars) + \n  geom_bar(aes(gear)) + \n  facet_wrap(~cyl) + \n  ggtitle('Plot 4')\n\nCombine plots directly:\n\nalign_plots(p1, p2)\n\n\n\n\n\n\n\nBy row:\n\nalign_plots(p1, p2, ncol = 1)\n\n\n\n\n\n\n\nAlign a list of plots:\n\nalign_plots(!!!list(p1, p2, p3))\n\n\n\n\n\n\n\nSet different width for plots:\n\nalign_plots(p1, p2, widths = c(2, 1))\n\n\n\n\n\n\n\nWorks for multiple plots:\n\nalign_plots(p1, p2, p3, p4, ncol = 2, widths = c(2, 1))\n\n\n\n\n\n\n\nSet space:\n\nalign_plots(p1, NULL, p2)\n\n\n\n\n\n\n\nMore see Data-Free Composition of ggalign tutorial book."
   },
   {
-    "objectID": "basics/heatmap-with-annotations.html",
-    "href": "basics/heatmap-with-annotations.html",
-    "title": "Heatmap with Annotations",
+    "objectID": "basics/heatmap.html",
+    "href": "basics/heatmap.html",
+    "title": "Heatmap",
     "section": "",
-    "text": "Heatmap with Annotations\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\nAnnotate top with color bars:\n\nggheatmap(mat) +\n    anno_top(size = unit(1, \"cm\")) +\n    align_kmeans(centers = 3L) +\n    ggalign(data = NULL) +\n    geom_tile(aes(y = 1L, fill = .panel, color = .panel)) +\n    theme_no_axes(\"y\")\n#&gt; → heatmap built with `geom_tile()`\n\n\n\n\n\n\n\nAnnotate both left and right positions:\n\nggheatmap(mat) +\n    anno_right(size = 0.3) +\n    align_dendro() +\n    anno_left(size = 0.3) +\n    ggalign(rowSums) +\n    geom_bar(aes(x = value, y = .y, fill = value),\n        orientation = \"y\", stat = \"identity\"\n    ) +\n    scale_fill_viridis_c(option = \"A\")\n#&gt; → heatmap built with `geom_tile()`"
+    "text": "Heatmap\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat)\n#&gt; → heatmap built with `geom_tile()`"
   },
   {
     "objectID": "complexheatmap/single-heatmap.html",

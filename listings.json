@@ -19,7 +19,7 @@
       "/basics/heatmap-with-group-variables.html",
       "/basics/heatmap-with-kmeans.html",
       "/basics/heatmap-with-ordering-weights.html",
-      "/basics/ggside-marginal-plots.html",
+      "/basics/marginal-plots.html",
       "/basics/plot-composer.html"
     ]
   },
@@ -33,7 +33,7 @@
       "/basics/heatmap-with-group-variables.html",
       "/basics/heatmap-with-kmeans.html",
       "/basics/heatmap-with-ordering-weights.html",
-      "/basics/ggside-marginal-plots.html",
+      "/basics/marginal-plots.html",
       "/basics/plot-composer.html",
       "/real-world-data/pan-cancer-immune-pathways.html",
       "/real-world-data/genomic-density-and-rainfall-plot.html",
