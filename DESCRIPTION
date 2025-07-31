@@ -25,6 +25,9 @@ Imports:
     readxl,
     tidyr,
     dplyr,
-    circlize
+    circlize,
+    cowplot,
+    ggsci,
+    ggpubr
 Remotes:
     Yunuuuu/ggalign

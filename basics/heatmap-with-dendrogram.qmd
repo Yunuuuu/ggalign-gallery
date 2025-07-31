@@ -2,7 +2,7 @@
 categories: [ggheatmap()]
 ---
 
-# Heatmap with dendrogram
+# Heatmap with Dendrogram
 
 ```{r}
 library(ggalign)
