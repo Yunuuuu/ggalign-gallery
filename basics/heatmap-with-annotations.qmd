@@ -31,6 +31,7 @@ ggheatmap(mat) +
 Annotate both left and right positions:
 
 ```{r}
+#| classes: preview-image
 ggheatmap(mat) +
     anno_right(size = 0.3) +
     align_dendro() +
