@@ -2,7 +2,7 @@
 categories: [align_plots()]
 ---
 
-# Arrange Plots Directly
+# Plot Composer
 
 ```{r}
 library(ggalign)

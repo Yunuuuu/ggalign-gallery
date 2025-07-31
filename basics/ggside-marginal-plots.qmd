@@ -2,16 +2,20 @@
 categories: [ggside()]
 ---
 
-# Marginal Plots
+# Marginal Plot
+
+A marginal plot is a visualization that combines a main plot (usually a scatter
+plot) with additional plots in the margins of the axes. These marginal plots
+display the distributions of the individual variables, often using histograms,
+box plots, or other visual representations.
 
 ```{r}
 library(ggalign)
 ```
 
-`ggside()` is provided as an alias for `quad_continuous()`, which is particularly useful for adding metadata or summary graphics along a continuous axis.
-
 ```{r}
-ggside(mpg, aes(displ, hwy, colour = class)) +
+ggside(mpg, aes(displ, hwy, colour = class)) -
+    theme_bw() +
     geom_point(size = 2) +
     # initialize top annotation
     anno_top(size = 0.3) +
@@ -24,8 +28,7 @@ ggside(mpg, aes(displ, hwy, colour = class)) +
     ggalign() +
     geom_density(aes(x = after_stat(density), hwy, colour = class),
         position = "stack"
-    ) &
-    theme_bw()
+    )
 ```
 
 Reproduce cases in [Add marginal plots](https://www.sthda.com/english/articles/24-ggpubr-publication-ready-plots/78-perfect-scatter-plots-with-correlation-and-marginal-histograms/) of `ggpubr` post.
@@ -79,3 +82,21 @@ ggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
     theme(legend.position = "none")
 ```
 
+```{r}
+ggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
+    geom_point(size = 3, alpha = 0.6) +
+    geom_smooth(method = lm) +
+    ggpubr::stat_cor() +
+    ggsci::scale_color_jco() +
+    theme_light() +
+    anno_top(size = 0.2) +
+    ggalign() +
+    geom_density(aes(x = Sepal.Length, fill = Species, alpha = 0.6)) +
+    theme_no_axes() +
+    anno_right(size = 0.2) +
+    ggalign() +
+    geom_density(aes(y = Sepal.Width, fill = Species), alpha = 0.6) +
+    theme_no_axes() &
+    ggsci::scale_fill_jco() &
+    theme(legend.position = "none")
+```
