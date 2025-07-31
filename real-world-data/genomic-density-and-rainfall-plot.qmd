@@ -41,13 +41,13 @@ window that is covered by genomic regions).
 
 ```{r}
 #| fig-height: 7
-#| fig-width: 9
+#| fig-width: 7
 circle_genomic(
     "hg19",
     radial = coord_radial(inner.radius = 0.2, rotate.angle = TRUE),
     direction = "inward",
     theme = theme(
-        plot.margin = margin(t = 10, b = 5, l = 2, unit = "mm")
+        plot.margin = margin(t = 10, b = 10, l = 2, unit = "mm")
     )
 ) -
     # Remove radial axes for a cleaner circular look
