@@ -106,7 +106,7 @@ circle_genomic(
         aes(middle, log10(dist), color = DMR),
         data = function(d) {
             d <- dplyr::bind_rows(!!!lapply(
-                split(d, ~DMR), function(dd) genomic_rainfall(dd)
+                split(d, ~DMR), function(dd) genomic_dist(dd)
             ))
             d$middle <- (d$start + d$end) / 2
             dplyr::rename(d, seqnames = chr)
