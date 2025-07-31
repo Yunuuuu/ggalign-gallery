@@ -1,0 +1,52 @@
+---
+categories: [ggheatmap()]
+---
+
+# Dotplot for Single Cell Marker Expression
+
+Example taken from <https://davemcg.github.io/post/lets-plot-scrna-dotplots/>, mimic the case presented in <https://yulab-smu.top/aplot/align-associated-subplots.html#a-single-cell-example>.
+
+![](https://yulab-smu.top/aplot/aplot_files/figure-html/dotTree2-1.png)
+
+```{r}
+#| code-fold: true
+library(ggalign)
+library(dplyr)
+```
+
+
+Process data:
+
+```{r}
+gene_cluster <- readr::read_tsv("rawdata/scRNA_dotplot_data.tsv.gz")
+
+data <- gene_cluster |>
+  mutate(`% Expressing` = (cell_exp_ct/cell_ct) * 100) |>
+  filter(count > 0, `% Expressing` > 1) 
+
+
+mat = data |> tidyr::pivot_wider(id_cols = "Gene", names_from = "cluster", values_from = "% Expressing") |> tibble::column_to_rownames("Gene")
+
+groups = data |> dplyr::select(cluster, Group) |> unique()
+```
+
+
+```{r}
+ggheatmap(mat, filling = NULL) + anno_left() + align_dendro()
+```
+
+
+
+```{r}
+#| fig-height: 10
+#| fig-width: 14
+  ggheatmap(mat, aes(x=.x, y = .y, size = value), filling = NULL) + 
+  geom_point() + 
+  cowplot::theme_cowplot() + 
+  theme(axis.line  = element_blank()) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  ylab(NULL) +
+  theme(axis.ticks = element_blank()) +
+  scale_color_gradientn(colours = viridis::viridis(20), limits = c(0,4), oob = scales::squish, name = 'log2 (count + 1)') +
+  scale_y_discrete(position = "right")
+```
