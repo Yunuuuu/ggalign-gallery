@@ -83,7 +83,7 @@ ggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
 ```
 
 ```{r}
-#| class-output: preview-image
+#| classes: preview-image
 ggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
     geom_point(size = 3, alpha = 0.6) +
     geom_smooth(method = lm) +
