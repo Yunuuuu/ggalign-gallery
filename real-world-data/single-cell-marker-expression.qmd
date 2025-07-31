@@ -32,12 +32,89 @@ groups = data |> dplyr::select(cluster, Group) |> unique()
 
 
 ```{r}
-ggheatmap(mat, filling = NULL) + anno_left() + align_dendro()
+#ggheatmap(mat, filling = NULL) +
+ggside(data,
+    aes(x=cluster, y = Gene, color = count, size = `% Expressing`)) + 
+    geom_point() + 
+    cowplot::theme_cowplot() + 
+    theme(axis.line  = element_blank()) +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+    ylab(NULL) +
+    theme(axis.ticks = element_blank()) +
+    scale_color_gradientn(colours = viridis::viridis(20), limits = c(0,4), oob = scales::squish, name = 'log2 (count + 1)') +
+    scale_y_discrete(position = "right") +
+    anno_left()
+```
+
+```{r}
+ggheatmap(mat, filling = NULL) + anno_left() + align_dendro() +
+  #ggalign() +
+  scheme_data(function(d) {
+    #print(str(d))
+    print(head(d))
+    rv = dplyr::inner_join(d, data, by = c("label" = "Gene"))
+    print(head(rv))
+    rv
+  })
+```
+
+
+```{r}
+ggheatmap(mat, filling = NULL) + anno_left() + align_dendro() +
+  #ggalign() +
+  scheme_data(function(d) {
+    #print(str(d))
+    print(head(d))
+    rv = dplyr::inner_join(d, data, by = c("label" = "Gene"))
+    print(head(rv))
+    rv
+  }) +
+  geom_point(aes(x=cluster, y = .names, color = count, size = `% Expressing`))
 ```
 
 
 
 ```{r}
+ggheatmap(mat, filling = NULL) + anno_left() + align_dendro() +
+  #ggalign() +
+  scheme_data(function(d) {
+    #print(str(d))
+    print(head(d))
+    rv = dplyr::inner_join(d, data, by = c("label" = "Gene"))
+    print(head(rv))
+    rv
+  }) +
+  geom_point(aes(color = count, size = `% Expressing`))
+```
+
+```{r}
+ggheatmap(mat, filling = NULL) + anno_left() + align_dendro() +
+  #ggalign() +
+  scheme_data(function(d) {
+    #print(str(d))
+    print(head(d))
+    rv = dplyr::inner_join(d, data, by = c("label" = "Gene"))
+    print(head(rv))
+    rv
+  }) +
+  geom_point(aes(color = count, fill = `% Expressing`))
+```
+
+
+<!-- ```{r}
+quad_discrete(mat, filling = NULL) + anno_left() + align_dendro() +
+  #ggalign() +
+  scheme_data(function(d) {
+    #print(str(d))
+    print(head(d))
+    rv = dplyr::inner_join(d, data, by = c("label" = "Gene"))
+    print(head(rv))
+    rv
+  }) +
+  geom_point(aes(color = count, size = `% Expressing`))
+``` -->
+
+<!-- ```{r}
 #| fig-height: 10
 #| fig-width: 14
   ggheatmap(mat, aes(x=.x, y = .y, size = value), filling = NULL) + 
@@ -49,4 +126,4 @@ ggheatmap(mat, filling = NULL) + anno_left() + align_dendro()
   theme(axis.ticks = element_blank()) +
   scale_color_gradientn(colours = viridis::viridis(20), limits = c(0,4), oob = scales::squish, name = 'log2 (count + 1)') +
   scale_y_discrete(position = "right")
-```
+``` -->
