@@ -24,6 +24,7 @@ Imports:
     R.utils,
     readxl,
     tidyr,
-    dplyr
+    dplyr,
+    circlize
 Remotes:
     Yunuuuu/ggalign
