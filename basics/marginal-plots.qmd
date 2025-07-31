@@ -15,7 +15,7 @@ library(ggalign)
 
 ```{r}
 ggside(mpg, aes(displ, hwy, colour = class)) -
-    theme_bw() +
+    scheme_theme(theme_bw()) +
     geom_point(size = 2) +
     # initialize top annotation
     anno_top(size = 0.3) +
@@ -83,6 +83,7 @@ ggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
 ```
 
 ```{r}
+#| class-output: preview-image
 ggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
     geom_point(size = 3, alpha = 0.6) +
     geom_smooth(method = lm) +
