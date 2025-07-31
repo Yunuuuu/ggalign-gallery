@@ -1,0 +1,81 @@
+---
+categories: [ggside()]
+---
+
+# Marginal Plots
+
+```{r}
+library(ggalign)
+```
+
+`ggside()` is provided as an alias for `quad_continuous()`, which is particularly useful for adding metadata or summary graphics along a continuous axis.
+
+```{r}
+ggside(mpg, aes(displ, hwy, colour = class)) +
+    geom_point(size = 2) +
+    # initialize top annotation
+    anno_top(size = 0.3) +
+    # add a plot in the top annotation
+    ggalign() +
+    geom_density(aes(displ, y = after_stat(density), colour = class), position = "stack") +
+    # initialize right annotation
+    anno_right(size = 0.3) +
+    # add a plot in the right annotation
+    ggalign() +
+    geom_density(aes(x = after_stat(density), hwy, colour = class),
+        position = "stack"
+    ) &
+    theme_bw()
+```
+
+Reproduce cases in [Add marginal plots](https://www.sthda.com/english/articles/24-ggpubr-publication-ready-plots/78-perfect-scatter-plots-with-correlation-and-marginal-histograms/) of `ggpubr` post.
+
+```{r}
+ggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
+    geom_point(size = 3, alpha = 0.6) +
+    ggsci::scale_color_jco() +
+    theme_classic() +
+    anno_top(size = 0.2) +
+    ggalign() +
+    geom_density(aes(x = Sepal.Length)) +
+    theme_no_axes() +
+    anno_right(size = 0.2) +
+    ggalign() +
+    geom_density(aes(y = Sepal.Width)) +
+    theme_no_axes()
+```
+
+
+```{r}
+ggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
+    geom_point(size = 3, alpha = 0.6) +
+    ggsci::scale_color_jco() +
+    theme_classic() +
+    anno_top(size = 0.2) +
+    ggalign() +
+    geom_boxplot(aes(x = Sepal.Length), fill = "grey") +
+    theme_no_axes() +
+    anno_right(size = 0.2) +
+    ggalign() +
+    geom_boxplot(aes(y = Sepal.Width), fill = "grey") +
+    theme_no_axes()
+```
+
+
+```{r}
+ggside(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
+    geom_point(size = 3, alpha = 0.6) +
+    ggsci::scale_color_jco() +
+    theme_light() +
+    anno_top(size = 0.2) +
+    ggalign() +
+    geom_density(aes(x = Sepal.Length, fill = Species, alpha = 0.6)) +
+    theme_no_axes() +
+    anno_right(size = 0.2) +
+    ggalign() +
+    geom_density(aes(y = Sepal.Width, fill = Species), alpha = 0.6) +
+    theme_no_axes() &
+    ggsci::scale_fill_jco() &
+    theme(legend.position = "none")
+```
+

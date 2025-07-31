@@ -2,7 +2,7 @@
 categories: [ggheatmap()]
 ---
 
-# Heatmap with Group variables
+# Heatmap with Group Variables
 
 ```{r}
 library(ggalign)

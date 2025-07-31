@@ -1,0 +1,18 @@
+---
+categories: [ggheatmap()]
+---
+
+# Heatmap Pie
+
+```{r}
+library(ggalign)
+```
+
+```{r}
+set.seed(123)
+ggheatmap(matrix(runif(360L), nrow = 20L), filling = NULL) +
+    geom_pie(aes(angle = value * 360, fill = value))
+```
+
+For more complex customizations of pie charts, you can try using `ggforce::geom_arc_bar()` instead.
+
