@@ -11,12 +11,16 @@
   {
     "listing": "/index.html",
     "items": [
+      "/basics/align_plots.html",
       "/basics/heatmap.html",
+      "/basics/heatmap-with-different-shape.html",
+      "/basics/heatmap-with-annotations.html",
+      "/basics/heatmap-with-dendrogram.html",
       "/basics/heatmap-with-group-variables.html",
       "/basics/heatmap-with-kmeans.html",
       "/basics/heatmap-with-ordering-weights.html",
-      "/basics/heatmap-with-annotations.html",
-      "/basics/heatmap-with-dendrogram.html",
+      "/basics/ggside-marginal-plots.html",
+      "/basics/ggside-marginal-plots-regression.html",
       "/real-world-data/pan-cancer-immune-pathways.html",
       "/real-world-data/complexheatmap-gene-expression.html",
       "/real-world-data/measles-vaccine-heatmap.html",
@@ -27,12 +31,16 @@
   {
     "listing": "/basics.html",
     "items": [
+      "/basics/align_plots.html",
       "/basics/heatmap.html",
+      "/basics/heatmap-with-different-shape.html",
+      "/basics/heatmap-with-annotations.html",
+      "/basics/heatmap-with-dendrogram.html",
       "/basics/heatmap-with-group-variables.html",
       "/basics/heatmap-with-kmeans.html",
       "/basics/heatmap-with-ordering-weights.html",
-      "/basics/heatmap-with-annotations.html",
-      "/basics/heatmap-with-dendrogram.html"
+      "/basics/ggside-marginal-plots.html",
+      "/basics/ggside-marginal-plots-regression.html"
     ]
   }
 ]
