@@ -24,6 +24,9 @@ Imports:
     R.utils,
     readxl,
     tidyr,
-    dplyr
+    dplyr,
+    cowplot,
+    ggsci,
+    ggpubr
 Remotes:
     Yunuuuu/ggalign
