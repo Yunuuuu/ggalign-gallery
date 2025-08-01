@@ -28,6 +28,8 @@ Imports:
     circlize,
     cowplot,
     ggsci,
-    ggpubr
+    ggpubr,
+    treeio,
+    ggtree
 Remotes:
     Yunuuuu/ggalign
