@@ -74,6 +74,7 @@ format:
       dark: [cosmo, scss/dark.scss]
     respect-user-color-scheme: true
     code-link: true
+    include-after-body: stats.html
     code-annotations: hover
     mermaid:
       theme: default
