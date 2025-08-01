@@ -104,7 +104,7 @@ Add basic pheatmap:
 ```{r}
 align_plots(
     p1,
-    pheatmap::pheatmap(matrix(rnorm(200), 20, 10))
+    pheatmap::pheatmap(matrix(rnorm(200), 20, 10), silent = TRUE)
 )
 ```
 
