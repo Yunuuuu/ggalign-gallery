@@ -1,0 +1,23 @@
+---
+categories: [align_plots()]
+---
+
+# Plot Composer - Inset
+
+Sometimes it's useful to inset a plot into another.
+
+```{r}
+library(ggalign)
+```
+
+```{r}
+library(grid)
+p1 <- ggplot(mtcars) +
+    geom_point(aes(mpg, disp))
+p2 <- ggplot(mtcars) +
+    geom_boxplot(aes(gear, disp, group = gear))
+# Use viewport() to define the plot area
+p1 + inset(p2, vp = viewport(0.6, 0.6,
+    just = c(0, 0), width = 0.4, height = 0.4
+))
+```
