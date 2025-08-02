@@ -20,9 +20,9 @@
       "/basics/heatmap-with-kmeans.html",
       "/basics/heatmap-with-ordering-weights.html",
       "/basics/marginal-plots.html",
-      "/basics/plot-composer.html",
-      "/basics/plot-composer-wrap.html",
-      "/basics/plot-composer-inset.html"
+      "/basics/plot-composer-inset.html",
+      "/basics/plot-composer-basics.html",
+      "/basics/plot-composer-wrap.html"
     ]
   },
   {
@@ -36,9 +36,9 @@
       "/basics/heatmap-with-kmeans.html",
       "/basics/heatmap-with-ordering-weights.html",
       "/basics/marginal-plots.html",
-      "/basics/plot-composer.html",
-      "/basics/plot-composer-wrap.html",
       "/basics/plot-composer-inset.html",
+      "/basics/plot-composer-basics.html",
+      "/basics/plot-composer-wrap.html",
       "/real-world-data/pan-cancer-immune-pathways.html",
       "/real-world-data/genomic-density-and-rainfall-plot.html",
       "/real-world-data/complexheatmap-gene-expression.html",
