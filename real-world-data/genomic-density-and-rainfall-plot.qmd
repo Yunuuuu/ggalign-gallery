@@ -56,7 +56,7 @@ circle_genomic(
         axis.ticks.r = element_blank()
     ) +
 
-    # Cytoband (Ideogram) Layer
+    # Cytoband (Ideogram) Layer ------------------
     ggalign(size = 0.1) +
     geom_rect(
         aes(
@@ -100,7 +100,7 @@ circle_genomic(
         }
     ) +
 
-    # add rainfall plot
+    # add rainfall plot -----------------------
     ggalign(bed_data) +
     geom_point(
         aes(middle, log10(dist), color = DMR),
@@ -120,7 +120,7 @@ circle_genomic(
         )
     ) +
 
-    # add density plot
+    # add density plot -----------------------
     ggalign(DMR_hyper, size = 0.5) +
     geom_density(
         aes(middle, density, color = after_scale(fill)),
@@ -143,5 +143,6 @@ circle_genomic(
             d
         }
     ) &
-    facet_sector(vars(seqnames))
+    facet_sector(vars(seqnames), drop = FALSE) &
+    theme(panel.background = element_rect(color = "black", fill = NA))
 ```
