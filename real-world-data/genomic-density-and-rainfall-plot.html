@@ -417,7 +417,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>        axis.ticks.r <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span></span>
 <span>    <span class="op">)</span> <span class="op">+</span></span>
 <span></span>
-<span>    <span class="co"># Cytoband (Ideogram) Layer</span></span>
+<span>    <span class="co"># Cytoband (Ideogram) Layer ------------------</span></span>
 <span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/ggalign.html">ggalign</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html">geom_rect</a></span><span class="op">(</span></span>
 <span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
@@ -461,7 +461,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>        <span class="op">}</span></span>
 <span>    <span class="op">)</span> <span class="op">+</span></span>
 <span></span>
-<span>    <span class="co"># add rainfall plot</span></span>
+<span>    <span class="co"># add rainfall plot -----------------------</span></span>
 <span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/ggalign.html">ggalign</a></span><span class="op">(</span><span class="va">bed_data</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span></span>
 <span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">middle</span>, <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">dist</span><span class="op">)</span>, color <span class="op">=</span> <span class="va">DMR</span><span class="op">)</span>,</span>
@@ -481,7 +481,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>        <span class="op">)</span></span>
 <span>    <span class="op">)</span> <span class="op">+</span></span>
 <span></span>
-<span>    <span class="co"># add density plot</span></span>
+<span>    <span class="co"># add density plot -----------------------</span></span>
 <span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/ggalign.html">ggalign</a></span><span class="op">(</span><span class="va">DMR_hyper</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span></span>
 <span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">middle</span>, <span class="va">density</span>, color <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html">after_scale</a></span><span class="op">(</span><span class="va">fill</span><span class="op">)</span><span class="op">)</span>,</span>
@@ -504,7 +504,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>            <span class="va">d</span></span>
 <span>        <span class="op">}</span></span>
 <span>    <span class="op">)</span> <span class="op">&amp;</span></span>
-<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/facet_sector.html">facet_sector</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">seqnames</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/facet_sector.html">facet_sector</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">seqnames</span><span class="op">)</span>, drop <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">&amp;</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"black"</span>, fill <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="genomic-density-and-rainfall-plot_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
