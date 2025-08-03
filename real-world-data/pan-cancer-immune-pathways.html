@@ -431,17 +431,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Yunuuuu/ggalign">ggalign</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Loading required package: ggplot2</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Attaching package: 'ggalign'</span></span>
-<span><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     element_polygon</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; Loading required package: ggplot2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/circle_layout.html">circle_discrete</a></span><span class="op">(</span><span class="va">logFC</span>,</span>
-<span>    radial <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_radial.html">coord_radial</a></span><span class="op">(</span>start <span class="op">=</span> <span class="va">pi</span> <span class="op">/</span> <span class="fl">2</span>, end <span class="op">=</span> <span class="va">pi</span> <span class="op">*</span> <span class="fl">2</span>, expand <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>,</span>
+<span>    radial <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_radial</a></span><span class="op">(</span>start <span class="op">=</span> <span class="va">pi</span> <span class="op">/</span> <span class="fl">2</span>, end <span class="op">=</span> <span class="va">pi</span> <span class="op">*</span> <span class="fl">2</span>, expand <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>,</span>
 <span>    sector_spacing <span class="op">=</span> <span class="fl">5</span> <span class="op">*</span> <span class="va">pi</span> <span class="op">/</span> <span class="fl">180</span></span>
 <span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="co"># Align dendrogram above the radial sectors, cluster conditions into 5 groups</span></span>

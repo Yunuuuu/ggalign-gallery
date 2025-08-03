@@ -386,12 +386,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>However, when region density is high, overplotting can obscure meaningful interpretation. To address this, we overlay a <strong>genomic density track</strong> that summarizes the fraction of a genomic window covered by regions—providing a smoother representation of local enrichment.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Yunuuuu/ggalign">ggalign</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Loading required package: ggplot2</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Attaching package: 'ggalign'</span></span>
-<span><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     element_polygon</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; Loading required package: ggplot2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>The data comes from the <code>circlize</code> package and includes both hyper- and hypo-methylated DMRs in the human genome.</p>
@@ -405,7 +400,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/circle_genomic.html">circle_genomic</a></span><span class="op">(</span></span>
 <span>    <span class="st">"hg19"</span>,</span>
-<span>    radial <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_radial.html">coord_radial</a></span><span class="op">(</span>inner.radius <span class="op">=</span> <span class="fl">0.2</span>, rotate.angle <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>    radial <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_radial</a></span><span class="op">(</span>inner.radius <span class="op">=</span> <span class="fl">0.2</span>, rotate.angle <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
 <span>    direction <span class="op">=</span> <span class="st">"inward"</span>,</span>
 <span>    theme <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
 <span>        plot.margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span>t <span class="op">=</span> <span class="fl">10</span>, b <span class="op">=</span> <span class="fl">10</span>, l <span class="op">=</span> <span class="fl">2</span>, unit <span class="op">=</span> <span class="st">"mm"</span><span class="op">)</span></span>
