@@ -559,7 +559,7 @@ ggheatmap(mat) +
         merge_dendrogram = TRUE
     ) +
     quad_active() -
-    with_quad(theme(strip.text = element_text()), "tr") &
+    quad_scope(theme(strip.text = element_text()), "tr") &
     theme(plot.margin = margin())
 ```
 
@@ -574,6 +574,6 @@ ggheatmap(mat) +
     align_group(rep(letters[1:6], 4)) +
     align_dendro(aes(color = branch), reorder_dendrogram = TRUE) +
     quad_active() -
-    with_quad(theme(strip.text = element_text()), "tr") &
+    quad_scope(theme(strip.text = element_text()), "tr") &
     theme(plot.margin = margin())
 ```
