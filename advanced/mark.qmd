@@ -1,5 +1,5 @@
 ---
-categories: [circle_discrete(), ggmark()]
+categories: [ggheatmap(), ggmark()]
 ---
 
 # Annotation observations
