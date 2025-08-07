@@ -16,6 +16,10 @@ lt <- list(
     b = sample(letters, 10),
     c = sample(letters, 15)
 )
+
+# 'tune()' converts the list into an UpSet-compatible format
+# For lists, the shape is automatically set to 'upset',
+# so there’s no need to manually specify the second argument
 ggupset(tune(lt)) +
     # fill is used for background rect
     scale_fill_manual(values = c("#F0F0F0", "white"), guide = "none") +
