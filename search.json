@@ -11,7 +11,7 @@
     "href": "basics/plot-composer-inset.html",
     "title": "Plot Composer - Inset",
     "section": "",
-    "text": "Plot Composer - Inset\nSometimes it’s useful to inset a plot into another.\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nlibrary(grid)\np1 &lt;- ggplot(mtcars) +\n    geom_point(aes(mpg, disp))\np2 &lt;- ggplot(mtcars) +\n    geom_boxplot(aes(gear, disp, group = gear))\n# Use viewport() to define the plot area\np1 + inset(p2, vp = viewport(0.6, 0.6,\n    just = c(0, 0), width = 0.4, height = 0.4\n))"
+    "text": "Plot Composer - Inset\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nlibrary(grid)\n# Create the main scatter plot: mpg vs disp\np1 &lt;- ggplot(mtcars) +\n    geom_point(aes(mpg, disp))\n\n# Create the inset plot: boxplot of disp by gear\np2 &lt;- ggplot(mtcars) +\n    geom_boxplot(aes(gear, disp, group = gear))\n\n# Compose the plots: insert p2 into p1 using a viewport\np1 + inset(p2, vp = viewport(0.6, 0.6,\n    just = c(0, 0), width = 0.4, height = 0.4\n))"
   },
   {
     "objectID": "basics/plot-composer-basics.html",
