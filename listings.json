@@ -1,12 +1,21 @@
 [
   {
-    "listing": "/real-world-data.html",
+    "listing": "/basics.html",
     "items": [
-      "/real-world-data/pan-cancer-immune-pathways.html",
-      "/real-world-data/genomic-density-and-rainfall-plot.html",
-      "/real-world-data/complexheatmap-gene-expression.html",
-      "/real-world-data/measles-vaccine-heatmap.html",
-      "/real-world-data/tcga-laml-oncoplot.html"
+      "/basics/circle.html",
+      "/basics/heatmap.html",
+      "/basics/heatmap-with-different-shape.html",
+      "/basics/heatmap-with-annotations.html",
+      "/basics/heatmap-with-dendrogram.html",
+      "/basics/heatmap-with-group-variables.html",
+      "/basics/heatmap-with-kmeans.html",
+      "/basics/heatmap-with-ordering-weights.html",
+      "/basics/marginal-plots.html",
+      "/basics/plot-composer-inset.html",
+      "/basics/plot-composer-basics.html",
+      "/basics/plot-composer-wrap.html",
+      "/basics/stack-bar.html",
+      "/basics/upset.html"
     ]
   },
   {
@@ -26,6 +35,7 @@
       "/basics/plot-composer-wrap.html",
       "/basics/stack-bar.html",
       "/basics/upset.html",
+      "/advanced/mark.html",
       "/real-world-data/pan-cancer-immune-pathways.html",
       "/real-world-data/genomic-density-and-rainfall-plot.html",
       "/real-world-data/complexheatmap-gene-expression.html",
@@ -35,22 +45,13 @@
     ]
   },
   {
-    "listing": "/basics.html",
+    "listing": "/real-world-data.html",
     "items": [
-      "/basics/circle.html",
-      "/basics/heatmap.html",
-      "/basics/heatmap-with-different-shape.html",
-      "/basics/heatmap-with-annotations.html",
-      "/basics/heatmap-with-dendrogram.html",
-      "/basics/heatmap-with-group-variables.html",
-      "/basics/heatmap-with-kmeans.html",
-      "/basics/heatmap-with-ordering-weights.html",
-      "/basics/marginal-plots.html",
-      "/basics/plot-composer-inset.html",
-      "/basics/plot-composer-basics.html",
-      "/basics/plot-composer-wrap.html",
-      "/basics/stack-bar.html",
-      "/basics/upset.html"
+      "/real-world-data/pan-cancer-immune-pathways.html",
+      "/real-world-data/genomic-density-and-rainfall-plot.html",
+      "/real-world-data/complexheatmap-gene-expression.html",
+      "/real-world-data/measles-vaccine-heatmap.html",
+      "/real-world-data/tcga-laml-oncoplot.html"
     ]
   }
 ]
