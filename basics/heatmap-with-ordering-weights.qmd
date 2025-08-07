@@ -18,6 +18,7 @@ mat <- matrix(
 )
 ```
 
+Order the observations based on the means.
 ```{r}
 ggheatmap(mat) +
     anno_left() +
