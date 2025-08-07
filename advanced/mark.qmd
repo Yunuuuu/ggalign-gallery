@@ -23,7 +23,6 @@ all observations and split them based on the groups defined in the layout.
 ```{r}
 set.seed(123)
 ggheatmap(mat) +
-    theme(axis.text.x = element_text(hjust = 0, angle = -60)) +
     anno_right() +
     align_kmeans(3L) +
     ggmark(mark_line()) +
@@ -35,7 +34,6 @@ Annotate a specific subset of observations:
 ```{r}
 set.seed(123)
 ggheatmap(mat) +
-    theme(axis.text.x = element_text(hjust = 0, angle = -60)) +
     anno_right() +
     align_kmeans(3L) +
     # Select and annotate rows 1–3 and 6–10 only
