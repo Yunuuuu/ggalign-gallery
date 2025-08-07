@@ -104,15 +104,14 @@ ggoncoplot(
     scale_x_continuous(breaks = scales::breaks_pretty(1)) -
     # we apply the scale mapping to
     # - the top and right annotation: `position = "tr"`
-    # - the main plot: `main = TRUE`
-    with_quad(
+    # - the main plot: `position = "i"`
+    quad_scope(
         scale_fill_brewer(
             "Mutations",
             palette = "Dark2",
             na.translate = FALSE, drop = FALSE
         ),
-        position = "tr",
-        main = TRUE
+        position = "tri"
     ) +
 
     # add bottom annotation ----------------------------
