@@ -36,6 +36,9 @@ website:
     left:
       - text: Basics
         href: basics.qmd
+      - text: Advanced
+        href: advanced.qmd
+        href: basics.qmd
       - text: Real World Data
         href: real-world-data.qmd
 
