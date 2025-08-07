@@ -1,3 +1,7 @@
+---
+categories: [circle_discrete()]
+---
+
 # Circlular plot
 
 ```{r}
