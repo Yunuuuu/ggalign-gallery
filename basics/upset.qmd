@@ -1,0 +1,34 @@
+---
+categories: [ggupset()]
+---
+
+# UpSet-style Plot
+
+```{r}
+library(ggalign)
+```
+
+Create a toy list of sets, Each element in the list is a character vector (simulating a set of items)
+```{r}
+set.seed(123)
+lt <- list(
+    a = sample(letters, 5),
+    b = sample(letters, 10),
+    c = sample(letters, 15)
+)
+ggupset(tune(lt)) +
+    # fill is used for background rect
+    scale_fill_manual(values = c("#F0F0F0", "white"), guide = "none") +
+    # color is used for background rect
+    scale_color_manual(values = c("grey", "black"), guide = "none") +
+
+    # Add top annotation showing the size of each intersection
+    anno_top(size = 0.5) +
+    ggalign(data = function(d) ggalign_attr(d, "intersection_sizes")) +
+    geom_bar(aes(y = .data$value), stat = "identity") +
+
+    # Add right annotation showing the size of each original set
+    anno_right(size = 0.5) +
+    ggalign(data = function(d) ggalign_attr(d, "set_sizes")) +
+    geom_bar(aes(x = .data$value), stat = "identity", orientation = "y")
+```
