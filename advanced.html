@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-08-07">
 
-<title>gallery</title>
+<title>advanced – gallery</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -45,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-f30f7745d46fb5a224dd9d6f71416dbd.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-11a4cd9e6fc539eda4b0577a59751620.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c007f422c60d7495a5a65c515def20f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-11a4cd9e6fc539eda4b0577a59751620.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9478ecce9cb05dd41baebd1cf85d842f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-23b5835d53721408ae21b5c2559418fa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-9478ecce9cb05dd41baebd1cf85d842f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-basics .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -91,91 +91,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-basics'] = new List('listing-basics', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-advanced .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-image','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-advanced'] = new List('listing-advanced', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-real-world-data .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-image','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-real-world-data'] = new List('listing-real-world-data', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-complexheatmap .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-image','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-complexheatmap'] = new List('listing-complexheatmap', options);
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -220,14 +136,12 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="ggalign gallery">
-<meta property="og:description" content="">
 <meta property="og:image" content="https://yunuuuu.github.io/ggalign-gallery/cover.png">
 <meta property="og:site_name" content="gallery">
 <meta property="og:image:alt" content="ggalign">
 <meta property="og:image:height" content="600">
 <meta property="og:image:width" content="518">
 <meta name="twitter:title" content="gallery">
-<meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://yunuuuu.github.io/ggalign-gallery/cover.png">
 <meta name="twitter:image:alt" content="ggalign">
 <meta name="twitter:image-height" content="600">
@@ -431,7 +345,7 @@ window.Quarto = {
 <span class="menu-text">Basics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./advanced.html"> 
+    <a class="nav-link active" href="./advanced.html" aria-current="page"> 
 <span class="menu-text">Advanced</span></a>
   </li>  
   <li class="nav-item">
@@ -480,330 +394,47 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(21)</span></div><div class="category" data-category="YWxpZ25fcGxvdHMoKQ==">align_plots() <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Y2lyY2xlX2Rpc2NyZXRlKCk=">circle_discrete() <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y2lyY2xlX2dlbm9taWMoKQ==">circle_genomic() <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2lyY2xlX2xheW91dCgp">circle_layout() <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2doZWF0bWFwKCk=">ggheatmap() <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Z2dtYXJrKCk=">ggmark() <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2dvbmNvcGxvdCgp">ggoncoplot() <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2dzaWRlKCk=">ggside() <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2d1cHNldCgp">ggupset() <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3RhY2tfZGlzY3JldGUoKQ==">stack_discrete() <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2lyY2xlX2Rpc2NyZXRlKCk=">circle_discrete() <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2dtYXJrKCk=">ggmark() <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
 
 
-<p class="date">2025-08-07</p>
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 7, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
 </header>
 
 
-<section id="basics" class="level1">
-<h1>Basics</h1>
-<div id="listing-basics" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Y2lyY2xlX2Rpc2NyZXRlKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
-<a href="./basics/circle.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/circle_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title" data-anchor-id="basics">
-Circlular plot
-</h5>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('Y2lyY2xlX2Rpc2NyZXRlKCk='); return false;">circle_discrete()</div>
 
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Z2doZWF0bWFwKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
-<a href="./basics/heatmap.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/heatmap_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Heatmap
-</h5>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('Z2doZWF0bWFwKCk='); return false;">ggheatmap()</div>
 
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Z2doZWF0bWFwKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="31">
-<a href="./basics/heatmap-with-different-shape.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/heatmap-with-different-shape_files/figure-html/unnamed-chunk-2-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Heatmap Pie
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2doZWF0bWFwKCk='); return false;">ggheatmap()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Z2doZWF0bWFwKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="143">
-<a href="./basics/heatmap-with-annotations.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/heatmap-with-annotations_files/figure-html/unnamed-chunk-4-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Heatmap with Annotations
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2doZWF0bWFwKCk='); return false;">ggheatmap()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="Z2doZWF0bWFwKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="66">
-<a href="./basics/heatmap-with-dendrogram.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/heatmap-with-dendrogram_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Heatmap with Dendrogram
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2doZWF0bWFwKCk='); return false;">ggheatmap()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="Z2doZWF0bWFwKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="48">
-<a href="./basics/heatmap-with-group-variables.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/heatmap-with-group-variables_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Heatmap with Group Variables
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2doZWF0bWFwKCk='); return false;">ggheatmap()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="Z2doZWF0bWFwKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
-<a href="./basics/heatmap-with-kmeans.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/heatmap-with-kmeans_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Heatmap with Kmeans
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2doZWF0bWFwKCk='); return false;">ggheatmap()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="Z2doZWF0bWFwKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="50">
-<a href="./basics/heatmap-with-ordering-weights.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/heatmap-with-ordering-weights_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Heatmap with Ordering Weights
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2doZWF0bWFwKCk='); return false;">ggheatmap()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="Z2dzaWRlKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="524">
-<a href="./basics/marginal-plots.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/marginal-plots_files/figure-html/unnamed-chunk-6-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Marginal Plot
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2dzaWRlKCk='); return false;">ggside()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="YWxpZ25fcGxvdHMoKQ==" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="66">
-<a href="./basics/plot-composer-inset.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/plot-composer-inset_files/figure-html/unnamed-chunk-2-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Plot Composer - Inset
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWxpZ25fcGxvdHMoKQ=='); return false;">align_plots()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="YWxpZ25fcGxvdHMoKQ==" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="104">
-<a href="./basics/plot-composer-basics.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/plot-composer-basics_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Plot Composer Basics
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWxpZ25fcGxvdHMoKQ=='); return false;">align_plots()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="YWxpZ25fcGxvdHMoKQ==" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="230">
-<a href="./basics/plot-composer-wrap.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/plot-composer-wrap_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Plot Composer – Arbitrary Plots
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWxpZ25fcGxvdHMoKQ=='); return false;">align_plots()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="12" data-categories="c3RhY2tfZGlzY3JldGUoKQ==" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
-<a href="./basics/stack-bar.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/stack-bar_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Stacked bar
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhY2tfZGlzY3JldGUoKQ=='); return false;">stack_discrete()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="13" data-categories="Z2d1cHNldCgp" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="194">
-<a href="./basics/upset.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="basics/upset_files/figure-html/unnamed-chunk-2-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-UpSet-style Plot
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2d1cHNldCgp'); return false;">ggupset()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="advanced" class="level1">
-<h1>Advanced</h1>
-<div id="listing-advanced" class="quarto-listing quarto-listing-container-grid">
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0" data-categories="Y2lyY2xlX2Rpc2NyZXRlKCklMkNnZ21hcmsoKQ==" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
 <a href="./advanced/mark.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="advanced/mark_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title" data-anchor-id="advanced">
+<h5 class="no-anchor card-title listing-title">
 Annotation observations
 </h5>
 <div class="listing-categories">
@@ -823,156 +454,7 @@ Aug 7, 2025
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="real-world-data" class="level1">
-<h1>Real World Data</h1>
-<div id="listing-real-world-data" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Y2lyY2xlX2xheW91dCgp" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058731" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="335">
-<a href="./real-world-data/pan-cancer-immune-pathways.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="real-world-data/pan-cancer-immune-pathways_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title" data-anchor-id="real-world-data">
-Disturbance of Immune-Related Pathways between Normal and Tumor Tissues in Pan-cancer
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2lyY2xlX2xheW91dCgp'); return false;">circle_layout()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Y2lyY2xlX2dlbm9taWMoKQ==" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058731" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1254">
-<a href="./real-world-data/genomic-density-and-rainfall-plot.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="real-world-data/genomic-density-and-rainfall-plot_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Genomic density and Rainfall plot
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2lyY2xlX2dlbm9taWMoKQ=='); return false;">circle_genomic()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Z2doZWF0bWFwKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058730" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="709">
-<a href="./real-world-data/complexheatmap-gene-expression.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="real-world-data/complexheatmap-gene-expression_files/figure-html/unnamed-chunk-2-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Heatmap of gene expression matrix
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2doZWF0bWFwKCk='); return false;">ggheatmap()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Z2doZWF0bWFwKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058731" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="223">
-<a href="./real-world-data/measles-vaccine-heatmap.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="real-world-data/measles-vaccine-heatmap_files/figure-html/unnamed-chunk-2-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Measles Vaccine Heatmap
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2doZWF0bWFwKCk='); return false;">ggheatmap()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="Z2dvbmNvcGxvdCgp" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058731" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="876">
-<a href="./real-world-data/tcga-laml-oncoplot.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="real-world-data/tcga-laml-oncoplot_files/figure-html/unnamed-chunk-3-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Oncoplot of TCGA LAML Mutation Data
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2dvbmNvcGxvdCgp'); return false;">ggoncoplot()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="complexheatmap" class="level1">
-<h1>ComplexHeatmap</h1>
-<p>Reproducing heatmaps from the <a href="https://jokergoo.github.io/ComplexHeatmap-reference/book/index.html">ComplexHeatmap book</a> using <code>ggalign</code>.</p>
-<div id="listing-complexheatmap" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Z2doZWF0bWFwKCk=" data-listing-date-sort="1754588058000" data-listing-file-modified-sort="1754588058728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3331">
-<a href="./complexheatmap/single-heatmap.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="complexheatmap/single-heatmap_files/figure-html/unnamed-chunk-2-1.png" style="height: 100%;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title" data-anchor-id="complexheatmap">
-A Single Heatmap
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2doZWF0bWFwKCk='); return false;">ggheatmap()</div>
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 7, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-
-
-
-</section>
-
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <a href="https://clustrmaps.com/site/1c7eq" title="Visit tracker" align="center"><img src="//clustrmaps.com/map_v2.png?cl=ffffff&amp;w=a&amp;t=tt&amp;d=-JR_DxIYoMer1Y4C8gQuN934GYQkB7HBGVGUHWF2_mU"></a>
 <!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <span id="busuanzi_container_site_pv" align="right">Total Visits: <span id="busuanzi_value_site_pv"></span> </span> -->
@@ -1427,9 +909,41 @@ Aug 7, 2025
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "Yunuuuu/ggalign-gallery";
+    script.dataset.repoId = "R_kgDOPU41Yg";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOPU41Ys4CtmMQ";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/Yunuuuu/ggalign-gallery/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/Yunuuuu/ggalign-gallery/edit/main/index.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/Yunuuuu/ggalign-gallery/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/Yunuuuu/ggalign-gallery/blob/main/advanced.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/Yunuuuu/ggalign-gallery/edit/main/advanced.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/Yunuuuu/ggalign-gallery/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

@@ -1,24 +1,5 @@
 [
   {
-    "listing": "/basics.html",
-    "items": [
-      "/basics/circle.html",
-      "/basics/heatmap.html",
-      "/basics/heatmap-with-different-shape.html",
-      "/basics/heatmap-with-annotations.html",
-      "/basics/heatmap-with-dendrogram.html",
-      "/basics/heatmap-with-group-variables.html",
-      "/basics/heatmap-with-kmeans.html",
-      "/basics/heatmap-with-ordering-weights.html",
-      "/basics/marginal-plots.html",
-      "/basics/plot-composer-inset.html",
-      "/basics/plot-composer-basics.html",
-      "/basics/plot-composer-wrap.html",
-      "/basics/stack-bar.html",
-      "/basics/upset.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/basics/circle.html",
@@ -42,6 +23,31 @@
       "/real-world-data/measles-vaccine-heatmap.html",
       "/real-world-data/tcga-laml-oncoplot.html",
       "/complexheatmap/single-heatmap.html"
+    ]
+  },
+  {
+    "listing": "/basics.html",
+    "items": [
+      "/basics/circle.html",
+      "/basics/heatmap.html",
+      "/basics/heatmap-with-different-shape.html",
+      "/basics/heatmap-with-annotations.html",
+      "/basics/heatmap-with-dendrogram.html",
+      "/basics/heatmap-with-group-variables.html",
+      "/basics/heatmap-with-kmeans.html",
+      "/basics/heatmap-with-ordering-weights.html",
+      "/basics/marginal-plots.html",
+      "/basics/plot-composer-inset.html",
+      "/basics/plot-composer-basics.html",
+      "/basics/plot-composer-wrap.html",
+      "/basics/stack-bar.html",
+      "/basics/upset.html"
+    ]
+  },
+  {
+    "listing": "/advanced.html",
+    "items": [
+      "/advanced/mark.html"
     ]
   },
   {
