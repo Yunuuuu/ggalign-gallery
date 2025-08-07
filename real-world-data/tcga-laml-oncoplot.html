@@ -481,15 +481,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/breaks_pretty.html">breaks_pretty</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">-</span></span>
 <span>    <span class="co"># we apply the scale mapping to</span></span>
 <span>    <span class="co"># - the top and right annotation: `position = "tr"`</span></span>
-<span>    <span class="co"># - the main plot: `main = TRUE`</span></span>
-<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/with_quad.html">with_quad</a></span><span class="op">(</span></span>
+<span>    <span class="co"># - the main plot: `position = "i"`</span></span>
+<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/quad_scope.html">quad_scope</a></span><span class="op">(</span></span>
 <span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_brewer</a></span><span class="op">(</span></span>
 <span>            <span class="st">"Mutations"</span>,</span>
 <span>            palette <span class="op">=</span> <span class="st">"Dark2"</span>,</span>
 <span>            na.translate <span class="op">=</span> <span class="cn">FALSE</span>, drop <span class="op">=</span> <span class="cn">FALSE</span></span>
 <span>        <span class="op">)</span>,</span>
-<span>        position <span class="op">=</span> <span class="st">"tr"</span>,</span>
-<span>        main <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>        position <span class="op">=</span> <span class="st">"tri"</span></span>
 <span>    <span class="op">)</span> <span class="op">+</span></span>
 <span></span>
 <span>    <span class="co"># add bottom annotation ----------------------------</span></span>
@@ -503,10 +502,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Ti/Tv"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/breaks_pretty.html">breaks_pretty</a></span><span class="op">(</span><span class="fl">3L</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_brewer</a></span><span class="op">(</span><span class="st">"Ti/Tv"</span>, palette <span class="op">=</span> <span class="st">"Set2"</span>, na.translate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: `with_quad()` was deprecated in ggalign 1.0.3.</span></span>
-<span><span class="co">#&gt; ℹ quad_scope()</span></span>
-<span><span class="co">#&gt; Warning: The `main` argument of `with_quad()` is deprecated as of ggalign 1.0.3.</span></span>
-<span><span class="co">#&gt; ℹ with_quad(position = "i")</span></span>
 <span><span class="co">#&gt; `geom_subtile()` subdivide tile into a maximal of 3 rectangles</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
