@@ -394,6 +394,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>    b <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">letters</span>, <span class="fl">10</span><span class="op">)</span>,</span>
 <span>    c <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">letters</span>, <span class="fl">15</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 'tune()' converts the list into an UpSet-compatible format</span></span>
+<span><span class="co"># For lists, the shape is automatically set to 'upset',</span></span>
+<span><span class="co"># so there’s no need to manually specify the second argument</span></span>
 <span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/ggupset.html">ggupset</a></span><span class="op">(</span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/tune.html">tune</a></span><span class="op">(</span><span class="va">lt</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="co"># fill is used for background rect</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#F0F0F0"</span>, <span class="st">"white"</span><span class="op">)</span>, guide <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span> <span class="op">+</span></span>
