@@ -32,7 +32,7 @@
     "href": "basics/heatmap-with-ordering-weights.html",
     "title": "Heatmap with Ordering Weights",
     "section": "",
-    "text": "Heatmap with Ordering Weights\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\n\nggheatmap(mat) +\n    anno_left() +\n    align_order(rowMeans)\n#&gt; → heatmap built with `geom_tile()`"
+    "text": "Heatmap with Ordering Weights\n\nlibrary(ggalign)\n#&gt; Loading required package: ggplot2\n#&gt; \n#&gt; Attaching package: 'ggalign'\n#&gt; The following object is masked from 'package:ggplot2':\n#&gt; \n#&gt;     element_polygon\n\n\nset.seed(123)\n# Prepare heatmap matrix\nmat &lt;- matrix(\n    rnorm(100, mean = 0, sd = 2),\n    nrow = 10, ncol = 10,\n    dimnames = list(paste0(\"G\", 1:10), paste0(\"S\", 1:10))\n)\n\nOrder the observations based on the means.\n\nggheatmap(mat) +\n    anno_left() +\n    align_order(rowMeans)\n#&gt; → heatmap built with `geom_tile()`"
   },
   {
     "objectID": "basics/heatmap-with-kmeans.html",
