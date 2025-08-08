@@ -1,0 +1,115 @@
+---
+categories: [align_plots()]
+---
+
+# Plot Composer – tagging
+
+When multiple plots are combined into a single figure—common in scientific
+publications—they are often referenced by tags or labels (e.g., “A”, “B”, “C”).
+While these tags can be added manually, it is much easier to let **ggalign**
+handle tagging automatically using the `layout_tags()` function.
+
+```{r}
+library(ggalign)
+```
+
+```{r}
+p1 <- ggplot(mtcars) +
+    geom_point(aes(mpg, disp))
+p2 <- ggplot(mtcars) +
+    geom_boxplot(aes(factor(gear), disp))
+p3 <- ggplot(mtcars) +
+    geom_bar(aes(factor(gear))) +
+    facet_wrap(~cyl)
+```
+
+## Basic tagging
+
+Set the `tags` argument in `layout_tags()` to specify the family of symbols used
+for tagging plots:
+
+    - `"1"`: Arabic numerals (1, 2, 3, ...)
+    - `"A"`: Uppercase Latin letters (A, B, C, ...)
+    - `"a"`: Lowercase Latin letters (a, b, c, ...)
+    - `"I"`: Uppercase Roman numerals (I, II, III, ...)
+    - `"i"`: Lowercase Roman numerals (i, ii, iii, ...)
+
+By default, nested layouts receive their own tags:
+
+```{r}
+align_plots(p1, align_plots(p2, p3), ncol = 1) + layout_tags("A")
+```
+
+## Suppressing internal tags in nested layouts
+
+To treat a nested layout as a single plot with a single tag, disable its
+internal tags by setting `tags = NULL`:
+
+```{r}
+align_plots(p1, align_plots(p2, p3) + layout_tags(NULL), ncol = 1) +
+    layout_tags("A")
+```
+
+## Multilevel tagging with custom separators
+Apply multilevel tagging where the outer layout uses letters and the inner
+layout uses numbers. You can specify a separator between parent and child tags:
+
+```{r}
+align_plots(
+    p1,
+    align_plots(p2, p3) + layout_tags(1, sep = ": "),
+    ncol = 1
+) +
+    layout_tags("A")
+```
+
+## Adding prefixes and suffixes
+
+You can customize tags by adding a prefix and/or suffix. Note that the parent
+layout’s prefix and suffix are applied to all plots, including nested layouts:
+
+```{r}
+align_plots(
+    p1,
+    align_plots(p2, p3) + layout_tags(1, sep = ": "),
+    ncol = 1
+) +
+    layout_tags("A", prefix = "Fig.")
+```
+
+## Custom tag sequences
+Instead of built-in sequences, you can provide your own tag vector:
+
+```{r}
+align_plots(
+    p1,
+    align_plots(p2, p3) + layout_tags(1),
+    ncol = 1
+) +
+    layout_tags(c("&", "%"))
+```
+
+## Tag appearance and theming
+Tags inherit their appearance from the plot’s theme. To modify tag styling for
+all plots in a layout, use the `&` operator:
+```{r}
+align_plots(
+    p1,
+    align_plots(p2, p3) + layout_tags(1),
+    ncol = 1
+) +
+    layout_tags(c("&", "%")) &
+    theme(plot.tag = element_text(color = "red"))
+```
+
+If the plot’s theme does not specify tag styling, the layout’s theme settings
+from `layout_theme()` will be used:
+```{r}
+align_plots(
+    p1,
+    align_plots(p2, p3) + layout_tags(1),
+    ncol = 1
+) +
+    layout_tags(c("&", "%")) +
+    layout_theme(plot.tag = element_text(color = "red"))
+```
