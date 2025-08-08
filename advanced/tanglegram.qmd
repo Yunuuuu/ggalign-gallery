@@ -1,0 +1,36 @@
+---
+categories: [stack_cross()]
+---
+
+# tanglegram
+
+```{r}
+library(ggalign)
+```
+
+```{r}
+set.seed(123)
+# Prepare heatmap matrix
+mat1 <- matrix(
+    rnorm(100, mean = 0, sd = 2),
+    nrow = 10, ncol = 10,
+    dimnames = list(paste0("G", 1:10), paste0("S", 1:10))
+)
+mat2 <- matrix(
+    rnorm(100, mean = 0, sd = 2),
+    nrow = 10, ncol = 10,
+    dimnames = list(paste0("G", 1:10), paste0("S", 1:10))
+)
+```
+
+This example demonstrates how to create a tanglegram—a paired visualization of
+two dendrogram-aligned with cross-links between related elements.
+```{r}
+stack_crossh() +
+    align_dendro(data = mat1) +
+    scale_x_reverse() +
+    cross_link(link_line()) +
+    align_dendro(data = mat2) -
+    no_expansion("x") -
+    theme(plot.margin = margin())
+```
