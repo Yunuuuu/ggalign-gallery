@@ -1,8 +1,19 @@
 [
   {
+    "listing": "/real-world-data.html",
+    "items": [
+      "/real-world-data/pan-cancer-immune-pathways.html",
+      "/real-world-data/genomic-density-and-rainfall-plot.html",
+      "/real-world-data/complexheatmap-gene-expression.html",
+      "/real-world-data/measles-vaccine-heatmap.html",
+      "/real-world-data/tcga-laml-oncoplot.html"
+    ]
+  },
+  {
     "listing": "/advanced.html",
     "items": [
-      "/advanced/mark.html"
+      "/advanced/mark.html",
+      "/advanced/upset.html"
     ]
   },
   {
@@ -21,8 +32,7 @@
       "/basics/plot-composer-basics.html",
       "/basics/plot-composer-wrap.html",
       "/basics/plot-composer-tagging.html",
-      "/basics/stack-bar.html",
-      "/basics/upset.html"
+      "/basics/stack-bar.html"
     ]
   },
   {
@@ -42,24 +52,14 @@
       "/basics/plot-composer-wrap.html",
       "/basics/plot-composer-tagging.html",
       "/basics/stack-bar.html",
-      "/basics/upset.html",
       "/advanced/mark.html",
+      "/advanced/upset.html",
       "/real-world-data/pan-cancer-immune-pathways.html",
       "/real-world-data/genomic-density-and-rainfall-plot.html",
       "/real-world-data/complexheatmap-gene-expression.html",
       "/real-world-data/measles-vaccine-heatmap.html",
       "/real-world-data/tcga-laml-oncoplot.html",
       "/complexheatmap/single-heatmap.html"
-    ]
-  },
-  {
-    "listing": "/real-world-data.html",
-    "items": [
-      "/real-world-data/pan-cancer-immune-pathways.html",
-      "/real-world-data/genomic-density-and-rainfall-plot.html",
-      "/real-world-data/complexheatmap-gene-expression.html",
-      "/real-world-data/measles-vaccine-heatmap.html",
-      "/real-world-data/tcga-laml-oncoplot.html"
     ]
   }
 ]
