@@ -30,7 +30,7 @@ ggheatmap(mat) +
     theme(plot.margin = margin(l = 0.1, t = 0.1, unit = "npc"))
 ```
 
-Annotate a specific subset of observations:
+You can also annotate a specific subset of observations. For example, to annotate only rows 1–3 and 6–10:
 ```{r}
 set.seed(123)
 ggheatmap(mat) +
@@ -41,3 +41,5 @@ ggheatmap(mat) +
     geom_boxplot(aes(.names, value)) +
     theme(plot.margin = margin(l = 0.1, t = 0.1, unit = "npc"))
 ```
+
+For more details, please visit <https://yunuuuu.github.io/ggalign-book/annotate-observations.html>
