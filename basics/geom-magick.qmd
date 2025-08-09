@@ -1,0 +1,34 @@
+# Using images as points in ggplot2
+
+```{r}
+library(ggalign)
+```
+
+`geom_magick()` Reads an image with magick, applies optional processing, and
+uses the result as the graphical shape for points in a plot.
+
+This is useful when you want to replace the usual point symbols with arbitrary
+images while keeping full control over their placement, size, and interpolation.
+
+```{r}
+set.seed(123)
+d <- data.frame(
+    x = rnorm(10),
+    y = rnorm(10),
+    image = "https://jeroenooms.github.io/images/frink.png",
+    fill = sample(c("A", "B", "C", "D"), 10, replace = TRUE),
+    alpha = rnorm(10, mean = 0.5, sd = 0.1)
+)
+d$alpha <- pmax(pmin(d$alpha, 1), 0)
+```
+
+You can combine the image with a fill color and transparency mapping. The fill
+is applied on top of the image, allowing for color-coded categories without
+losing the image shape. The size aesthetic controls the image width in `"mm"`.
+```{r}
+ggplot(d, aes(x, y)) +
+    geom_magick(
+        aes(image = image, fill = fill, alpha = alpha),
+        size = 12, show.legend = FALSE
+    )
+```
