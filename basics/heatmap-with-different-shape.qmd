@@ -24,6 +24,7 @@ For more complex customizations of pie charts, you can try using `ggforce::geom_
 Visualize a smaller heatmap matrix using 3D tiles where height and fill color represent values:
 
 ```{r}
+#| classes: preview-image
 set.seed(123)
 small_mat <- matrix(rnorm(81), nrow = 9)
 rownames(small_mat) <- paste0("row", seq_len(nrow(small_mat)))
