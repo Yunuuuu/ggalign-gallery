@@ -27,11 +27,11 @@ This example demonstrates how to create a tanglegram—a paired visualization of
 two dendrogram-aligned with cross-links between related elements.
 ```{r}
 #| classes: preview-image
-stack_crossh() +
-    align_dendro(aes(color = branch), data = mat1, k = 3L) +
+stack_crossh(mat1) +
+    align_dendro(aes(color = branch), k = 3L) +
     scale_x_reverse() +
-    cross_link(link_line()) +
-    align_dendro(aes(color = branch), data = mat2, k = 2L) -
+    cross_link(link_line(), data = mat2) +
+    align_dendro(aes(color = branch), k = 2L) -
     no_expansion("x") -
     scale_color_brewer(palette = "Dark2") -
     theme(plot.margin = margin()) 
