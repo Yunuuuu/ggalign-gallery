@@ -63,7 +63,13 @@ ggheatmap(summarized$num, filling = FALSE) -
     scale_fill_viridis_c(name = "Mean") +
     scale_size_continuous(name = "Proportion", range = c(1, 4)) +
     theme_bw() +
-    theme(axis.text.x = element_text(angle = -60, hjust = 0)) +
+    theme(
+        axis.text.x = element_text(angle = -60, hjust = 0),
+        strip.text.y.right = element_blank(),
+        plot.margin = margin(),
+        strip.background = element_rect(colour = NA),
+        strip.text = element_text(face = "bold")
+    ) +
     ggh4x::facet_grid2(
         strip = ggh4x::strip_themed(
             clip = "off",
