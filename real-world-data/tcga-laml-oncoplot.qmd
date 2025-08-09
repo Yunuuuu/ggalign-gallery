@@ -25,7 +25,6 @@ new_laml <- maftools::subsetMaf(laml,
 ```
 
 ```{r}
-#| code-fold: true
 library(ggalign)
 ```
 

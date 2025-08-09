@@ -9,7 +9,6 @@ package to reproduce the figure from
 <https://jokergoo.github.io/ComplexHeatmap-reference/book/more-examples.html>.
 
 ```{r}
-#| code-fold: true
 library(ggalign)
 ```
 

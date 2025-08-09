@@ -7,12 +7,10 @@ In this thread, we'll use `ggalign` to draw all the heatmap in
 <https://jokergoo.github.io/ComplexHeatmap-reference/book/a-single-heatmap.html>
 
 ```{r setup}
-#| code-fold: true
 library(ggalign)
 ```
 
 ```{r}
-#| code-fold: true
 set.seed(123)
 nr1 <- 4
 nr2 <- 8

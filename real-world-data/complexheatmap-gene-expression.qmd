@@ -9,7 +9,6 @@ package to reproduce the multi-panel gene expression heatmap from
 <https://jokergoo.github.io/ComplexHeatmap-reference/book/more-examples.html>.
 
 ```{r setup}
-#| code-fold: true
 library(ggalign)
 ```
 
