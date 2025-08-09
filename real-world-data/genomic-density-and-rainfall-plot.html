@@ -420,29 +420,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>    <span class="op">)</span> <span class="op">+</span></span>
 <span></span>
 <span>    <span class="co"># Cytoband (Ideogram) Layer ------------------</span></span>
-<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/ggalign.html">ggalign</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html">geom_rect</a></span><span class="op">(</span></span>
-<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
-<span>            xmin <span class="op">=</span> <span class="va">start</span>, xmax <span class="op">=</span> <span class="va">end</span>, ymin <span class="op">=</span> <span class="fl">0</span>, ymax <span class="op">=</span> <span class="fl">1</span>,</span>
-<span>            fill <span class="op">=</span> <span class="va">gieStain</span></span>
-<span>        <span class="op">)</span></span>
-<span>    <span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span></span>
-<span>        values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
-<span>            gpos100 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span>, maxColorValue <span class="op">=</span> <span class="fl">255</span><span class="op">)</span>,</span>
-<span>            gpos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span>, maxColorValue <span class="op">=</span> <span class="fl">255</span><span class="op">)</span>,</span>
-<span>            gpos75 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">130</span>, <span class="fl">130</span>, <span class="fl">130</span>, maxColorValue <span class="op">=</span> <span class="fl">255</span><span class="op">)</span>,</span>
-<span>            gpos66 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">160</span>, <span class="fl">160</span>, <span class="fl">160</span>, maxColorValue <span class="op">=</span> <span class="fl">255</span><span class="op">)</span>,</span>
-<span>            gpos50 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fl">200</span>, <span class="fl">200</span>, maxColorValue <span class="op">=</span> <span class="fl">255</span><span class="op">)</span>,</span>
-<span>            gpos33 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">210</span>, <span class="fl">210</span>, <span class="fl">210</span>, maxColorValue <span class="op">=</span> <span class="fl">255</span><span class="op">)</span>,</span>
-<span>            gpos25 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fl">200</span>, <span class="fl">200</span>, maxColorValue <span class="op">=</span> <span class="fl">255</span><span class="op">)</span>,</span>
-<span>            gvar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">220</span>, <span class="fl">220</span>, <span class="fl">220</span>, maxColorValue <span class="op">=</span> <span class="fl">255</span><span class="op">)</span>,</span>
-<span>            gneg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">255</span>, <span class="fl">255</span>, <span class="fl">255</span>, maxColorValue <span class="op">=</span> <span class="fl">255</span><span class="op">)</span>,</span>
-<span>            acen <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">217</span>, <span class="fl">47</span>, <span class="fl">39</span>, maxColorValue <span class="op">=</span> <span class="fl">255</span><span class="op">)</span>,</span>
-<span>            stalk <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">127</span>, <span class="fl">164</span>, maxColorValue <span class="op">=</span> <span class="fl">255</span><span class="op">)</span></span>
-<span>        <span class="op">)</span>,</span>
-<span>        guide <span class="op">=</span> <span class="st">"none"</span></span>
-<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/plot_ideogram.html">plot_ideogram</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span></span>
 <span>        breaks <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/breaks_pretty.html">breaks_pretty</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span>,</span>
 <span>        labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/label_bytes.html">label_bytes</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -452,16 +430,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>        theta <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guide_axis_theta.html">guide_axis_theta</a></span><span class="op">(</span>angle <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
 <span>    <span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.theta <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">6</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>, oob <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="va"><a href="https://scales.r-lib.org/reference/oob.html">oob_keep</a></span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="co"># Add chromosome labels</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">middle</span>, label <span class="op">=</span> <span class="va">seqnames</span>, y <span class="op">=</span> <span class="fl">2.2</span><span class="op">)</span>,</span>
-<span>        vjust <span class="op">=</span> <span class="fl">0</span>,</span>
-<span>        data <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">d</span><span class="op">)</span> <span class="op">{</span></span>
-<span>            <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/ggalign_attr.html">ggalign_attr</a></span><span class="op">(</span><span class="va">d</span>, <span class="st">"ranges"</span><span class="op">)</span></span>
-<span>            <span class="va">data</span><span class="op">$</span><span class="va">middle</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">start</span> <span class="op">+</span> <span class="va">data</span><span class="op">$</span><span class="va">end</span><span class="op">)</span> <span class="op">/</span> <span class="fl">2</span></span>
-<span>            <span class="va">data</span></span>
-<span>        <span class="op">}</span></span>
-<span>    <span class="op">)</span> <span class="op">+</span></span>
 <span></span>
 <span>    <span class="co"># add rainfall plot -----------------------</span></span>
 <span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/ggalign.html">ggalign</a></span><span class="op">(</span><span class="va">bed_data</span><span class="op">)</span> <span class="op">+</span></span>
@@ -479,7 +447,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>        palette <span class="op">=</span> <span class="st">"Dark2"</span>,</span>
 <span>        guide <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guide_legend.html">guide_legend</a></span><span class="op">(</span></span>
 <span>            position <span class="op">=</span> <span class="st">"inside"</span>,</span>
-<span>            theme <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position.inside <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
+<span>            theme <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>                legend.position.inside <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">0.5</span><span class="op">)</span>,</span>
+<span>                legend.key <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op">(</span>color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span>,</span>
+<span>                legend.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span></span>
+<span>            <span class="op">)</span></span>
 <span>        <span class="op">)</span></span>
 <span>    <span class="op">)</span> <span class="op">+</span></span>
 <span></span>
