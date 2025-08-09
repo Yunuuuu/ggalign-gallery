@@ -2,8 +2,8 @@
 categories: [ggheatmap()]
 ---
 
-# A Single Heatmap
-In this thread, we'll use `ggalign` to draw all the heatmap in
+# ComplexHeatmap Reproduction
+In this thread, we use `ggalign` to recreate all the heatmaps shown in  
 <https://jokergoo.github.io/ComplexHeatmap-reference/book/a-single-heatmap.html>
 
 ```{r setup}

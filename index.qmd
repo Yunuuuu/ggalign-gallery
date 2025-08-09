@@ -53,9 +53,3 @@ listing:
 
 :::{#real-world-data}
 :::
-
-# ComplexHeatmap
-Reproducing heatmaps from the [ComplexHeatmap book](https://jokergoo.github.io/ComplexHeatmap-reference/book/index.html) using `ggalign`.
-
-:::{#complexheatmap}
-:::
