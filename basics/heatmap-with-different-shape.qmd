@@ -2,7 +2,7 @@
 categories: [ggheatmap()]
 ---
 
-# Heatmap Pie
+# Heatmap with different shapes
 
 ```{r}
 library(ggalign)
