@@ -28,11 +28,11 @@ p3 <- ggplot(mtcars) +
 Set the `tags` argument in `layout_tags()` to specify the family of symbols used
 for tagging plots:
 
-    - `"1"`: Arabic numerals (1, 2, 3, ...)
-    - `"A"`: Uppercase Latin letters (A, B, C, ...)
-    - `"a"`: Lowercase Latin letters (a, b, c, ...)
-    - `"I"`: Uppercase Roman numerals (I, II, III, ...)
-    - `"i"`: Lowercase Roman numerals (i, ii, iii, ...)
+- `"1"`: Arabic numerals (1, 2, 3, ...)
+- `"A"`: Uppercase Latin letters (A, B, C, ...)
+- `"a"`: Lowercase Latin letters (a, b, c, ...)
+- `"I"`: Uppercase Roman numerals (I, II, III, ...)
+- `"i"`: Lowercase Roman numerals (i, ii, iii, ...)
 
 By default, nested layouts receive their own tags:
 
@@ -95,10 +95,10 @@ all plots in a layout, use the `&` operator:
 ```{r}
 align_plots(
     p1,
-    align_plots(p2, p3) + layout_tags(1),
+    align_plots(p2, p3) + layout_tags(1, sep = ": "),
     ncol = 1
 ) +
-    layout_tags(c("&", "%")) &
+    layout_tags("A", prefix = "Fig.") &
     theme(plot.tag = element_text(color = "red"))
 ```
 
@@ -107,9 +107,9 @@ from `layout_theme()` will be used:
 ```{r}
 align_plots(
     p1,
-    align_plots(p2, p3) + layout_tags(1),
+    align_plots(p2, p3) + layout_tags(1, sep = ": "),
     ncol = 1
 ) +
-    layout_tags(c("&", "%")) +
+    layout_tags("A", prefix = "Fig.") +
     layout_theme(plot.tag = element_text(color = "red"))
 ```
