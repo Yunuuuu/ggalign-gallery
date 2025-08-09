@@ -1,3 +1,8 @@
+---
+categories: [geom_magick()]
+---
+
+
 # Using images as points in ggplot2
 
 ```{r}
