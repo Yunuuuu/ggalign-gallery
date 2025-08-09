@@ -104,14 +104,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <meta property="og:title" content="ggalign gallery">
-<meta property="og:description" content="">
 <meta property="og:image" content="https://yunuuuu.github.io/ggalign-gallery/cover.png">
 <meta property="og:site_name" content="gallery">
 <meta property="og:image:alt" content="ggalign">
 <meta property="og:image:height" content="600">
 <meta property="og:image:width" content="518">
 <meta name="twitter:title" content="gallery">
-<meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://yunuuuu.github.io/ggalign-gallery/cover.png">
 <meta name="twitter:image:alt" content="ggalign">
 <meta name="twitter:image-height" content="600">
@@ -390,6 +388,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     element_polygon</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<section id="basic-heatmap-with-pie-chart" class="level2"><h2 class="anchored" data-anchor-id="basic-heatmap-with-pie-chart">Basic Heatmap with Pie Chart</h2>
+<p>Create a heatmap where each cell is represented by a pie chart, with slice angles proportional to the values:</p>
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/heatmap_layout.html">ggheatmap</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">360L</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">20L</span><span class="op">)</span>, filling <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op">+</span></span>
@@ -402,9 +402,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>For more complex customizations of pie charts, you can try using <code>ggforce::geom_arc_bar()</code> instead.</p>
+</section><section id="d-heatmap" class="level2"><h2 class="anchored" data-anchor-id="d-heatmap">3D Heatmap</h2>
+<p>Visualize a smaller heatmap matrix using 3D tiles where height and fill color represent values:</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
+<span><span class="va">small_mat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">81</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">9</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">small_mat</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"row"</span>, <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">small_mat</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">small_mat</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"column"</span>, <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">small_mat</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/heatmap_layout.html">ggheatmap</a></span><span class="op">(</span><span class="va">small_mat</span>,</span>
+<span>    filling <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>    theme <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>        legend.box.spacing <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">10</span>, <span class="st">"mm"</span><span class="op">)</span>,</span>
+<span>        plot.margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span>t <span class="op">=</span> <span class="fl">15</span>, unit <span class="op">=</span> <span class="st">"mm"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/geom_rect3d.html">geom_tile3d</a></span><span class="op">(</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">value</span>, z <span class="op">=</span> <span class="va">value</span>, width <span class="op">=</span> <span class="fl">0.8</span>, height <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span>,</span>
+<span>        color <span class="op">=</span> <span class="st">"black"</span></span>
+<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_fill_viridis_c</a></span><span class="op">(</span></span>
+<span>        option <span class="op">=</span> <span class="st">"plasma"</span>,</span>
+<span>        breaks <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/breaks_pretty.html">breaks_pretty</a></span><span class="op">(</span><span class="fl">3L</span><span class="op">)</span></span>
+<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html">coord_cartesian</a></span><span class="op">(</span>clip <span class="op">=</span> <span class="st">"off"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="heatmap-with-different-shape_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
-</section></main><!-- /main --><a href="https://clustrmaps.com/site/1c7eq" title="Visit tracker" align="center"><img src="//clustrmaps.com/map_v2.png?cl=ffffff&amp;w=a&amp;t=tt&amp;d=-JR_DxIYoMer1Y4C8gQuN934GYQkB7HBGVGUHWF2_mU"></a>
+</section></section></main><!-- /main --><a href="https://clustrmaps.com/site/1c7eq" title="Visit tracker" align="center"><img src="//clustrmaps.com/map_v2.png?cl=ffffff&amp;w=a&amp;t=tt&amp;d=-JR_DxIYoMer1Y4C8gQuN934GYQkB7HBGVGUHWF2_mU"></a>
 <!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <span id="busuanzi_container_site_pv" align="right">Total Visits: <span id="busuanzi_value_site_pv"></span> </span> -->
 <script id="quarto-html-after-body" type="application/javascript">
