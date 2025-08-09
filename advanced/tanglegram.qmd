@@ -34,3 +34,15 @@ stack_crossh() +
     no_expansion("x") -
     theme(plot.margin = margin())
 ```
+
+```{r}
+#| classes: preview-image
+stack_crossh() +
+    align_dendro(aes(color = branch), data = mat1, k = 3L) +
+    scale_x_reverse() +
+    cross_link(link_line()) +
+    align_dendro(aes(color = branch), data = mat2, k = 2L) -
+    no_expansion("x") -
+    scale_color_brewer(palette = "Dark2") -
+    theme(plot.margin = margin()) 
+```
