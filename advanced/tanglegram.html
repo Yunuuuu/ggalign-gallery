@@ -105,13 +105,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <meta property="og:title" content="ggalign gallery">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://yunuuuu.github.io/ggalign-gallery/advanced/tanglegram_files/figure-html/unnamed-chunk-4-1.png">
+<meta property="og:image" content="https://yunuuuu.github.io/ggalign-gallery/advanced/tanglegram_files/figure-html/unnamed-chunk-3-1.png">
 <meta property="og:site_name" content="gallery">
 <meta property="og:image:height" content="960">
 <meta property="og:image:width" content="1344">
 <meta name="twitter:title" content="gallery">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://yunuuuu.github.io/ggalign-gallery/advanced/tanglegram_files/figure-html/unnamed-chunk-4-1.png">
+<meta name="twitter:image" content="https://yunuuuu.github.io/ggalign-gallery/advanced/tanglegram_files/figure-html/unnamed-chunk-3-1.png">
 <meta name="twitter:image-height" content="960">
 <meta name="twitter:image-width" content="1344">
 <meta name="twitter:card" content="summary_large_image">
@@ -403,33 +403,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This example demonstrates how to create a tanglegram—a paired visualization of two dendrogram-aligned with cross-links between related elements.</p>
-<div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/stack_cross.html">stack_crossh</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/align_dendro.html">align_dendro</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mat1</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_reverse</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/cross_link.html">cross_link</a></span><span class="op">(</span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/link_line.html">link_line</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/align_dendro.html">align_dendro</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mat2</span><span class="op">)</span> <span class="op">-</span></span>
-<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/no_expansion.html">no_expansion</a></span><span class="op">(</span><span class="st">"x"</span><span class="op">)</span> <span class="op">-</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="tanglegram_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
 <div class="cell preview-image">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/stack_cross.html">stack_crossh</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/align_dendro.html">align_dendro</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">branch</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">mat1</span>, k <span class="op">=</span> <span class="fl">3L</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/stack_cross.html">stack_crossh</a></span><span class="op">(</span><span class="va">mat1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/align_dendro.html">align_dendro</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">branch</span><span class="op">)</span>, k <span class="op">=</span> <span class="fl">3L</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_reverse</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/cross_link.html">cross_link</a></span><span class="op">(</span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/link_line.html">link_line</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/align_dendro.html">align_dendro</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">branch</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">mat2</span>, k <span class="op">=</span> <span class="fl">2L</span><span class="op">)</span> <span class="op">-</span></span>
+<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/cross_link.html">cross_link</a></span><span class="op">(</span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/link_line.html">link_line</a></span><span class="op">(</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">mat2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/align_dendro.html">align_dendro</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">branch</span><span class="op">)</span>, k <span class="op">=</span> <span class="fl">2L</span><span class="op">)</span> <span class="op">-</span></span>
 <span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/no_expansion.html">no_expansion</a></span><span class="op">(</span><span class="st">"x"</span><span class="op">)</span> <span class="op">-</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_color_brewer</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"Dark2"</span><span class="op">)</span> <span class="op">-</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="tanglegram_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="tanglegram_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
