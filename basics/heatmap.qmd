@@ -12,12 +12,72 @@ library(ggalign)
 set.seed(123)
 # Prepare heatmap matrix
 mat <- matrix(
-    rnorm(100, mean = 0, sd = 2),
+    rnorm(90, mean = 0, sd = 2),
     nrow = 10, ncol = 10,
     dimnames = list(paste0("G", 1:10), paste0("S", 1:10))
 )
 ```
 
+## Basic Heatmap
 ```{r}
 ggheatmap(mat)
+```
+
+## Group Heatmap by Sample Groups
+Group columns by a categorical variable (e.g., randomly assigned groups "a" to "d"):
+```{r}
+ggheatmap(mat) +
+    anno_top() +
+    align_group(sample(letters[1:4], ncol(mat), replace = TRUE))
+```
+
+## Group Heatmap by K-means Clustering
+Group columns by k-means clusters (3 clusters in this example):
+```{r}
+ggheatmap(mat) +
+    anno_top() +
+    align_kmeans(3)
+```
+
+## Order Rows by Mean Values
+Order the rows based on their mean values to highlight overall expression trends:
+```{r}
+ggheatmap(mat) +
+    anno_left() +
+    align_order(rowMeans)
+```
+
+## Add Dendrogram with Branch Coloring
+Add a dendrogram on top with branches colored and annotated, showing 3 clusters:
+```{r}
+ggheatmap(mat) +
+    anno_top() +
+    align_dendro(aes(color = branch), k = 3) +
+    geom_point(aes(color = branch, y = y)) +
+    scale_color_brewer(palette = "Dark2")
+```
+
+## Annotate Top with Color Bars
+Add colored annotation bars on top of the heatmap, matching cluster assignment:
+```{r}
+ggheatmap(mat) +
+    anno_top(size = unit(1, "cm")) +
+    align_kmeans(centers = 3L) +
+    ggalign(data = NULL) +
+    geom_tile(aes(y = 1L, fill = .panel, color = .panel)) +
+    theme_no_axes("y")
+```
+
+## Annotate on both Left and Right sides
+```{r}
+#| classes: preview-image
+ggheatmap(mat) +
+    anno_right(size = 0.3) +
+    align_dendro() +
+    anno_left(size = 0.3) +
+    ggalign(rowSums) +
+    geom_bar(aes(x = value, y = .y, fill = value),
+        orientation = "y", stat = "identity"
+    ) +
+    scale_fill_viridis_c(option = "A")
 ```
