@@ -4,11 +4,10 @@
 library(ggalign)
 ```
 
-Data was processed from
+The raw data were obtained from
 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210347. The preprocessing
 workflow is documented in detail here:
 <https://github.com/Yunuuuu/ggalign-research/blob/main/Figure%206-data-preprocess.qmd>.
-
 
 ## Load processed data
 ```{r}
@@ -52,6 +51,8 @@ guide_axis_trunc <- function(lower = NULL, upper = NULL) {
 
 ## Visualization pipeline
 ```{r}
+#| fig-width: 12
+#| fig-height: 8
 ggheatmap(summarized$num, filling = FALSE) -
     # set default theme
     scheme_theme(
@@ -69,7 +70,6 @@ ggheatmap(summarized$num, filling = FALSE) -
         data$average <- summarized$ave[cbind(data$.row_index, data$.column_index)]
         data
     }) +
-    # geom_pie(aes(fill = average, angle = value * 360), angle0 = 90) +
     geom_point(aes(fill = average, size = value), shape = 21) +
     scale_fill_viridis_c(name = "Mean") +
     scale_size_continuous(name = "Proportion", range = c(1, 4)) +
