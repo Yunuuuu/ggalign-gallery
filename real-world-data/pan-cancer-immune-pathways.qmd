@@ -40,7 +40,8 @@ library(ggalign)
 ```{r}
 circle_discrete(logFC,
     radial = coord_radial(start = pi / 2, end = pi * 2, expand = FALSE),
-    sector_spacing = 5 * pi / 180
+    sector_spacing = 5 * pi / 180,
+    theme = theme(plot.margin = margin(l = 5, t = 5, b = 6, unit = "mm"))
 ) +
     # Align dendrogram above the radial sectors, cluster conditions into 5 groups
     align_dendro(aes(color = branch), k = 5L, size = 1) +
@@ -60,5 +61,6 @@ circle_discrete(logFC,
         limits = c(-1, 1),
         breaks = c(-0.5, 0, 0.5)
     ) +
-    guides(r = "none", r.sec = "axis", theta = guide_axis_theta(angle = 0))
+    guides(r = "none", r.sec = "axis", theta = guide_axis_theta(angle = 0)) +
+    theme(axis.text.theta = element_text())
 ```
