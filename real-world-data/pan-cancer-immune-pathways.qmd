@@ -1,5 +1,5 @@
 ---
-categories: [circle_layout()]
+categories: [circle_discrete()]
 ---
 
 # Disturbance of Immune-Related Pathways between Normal and Tumor Tissues in Pan-cancer
