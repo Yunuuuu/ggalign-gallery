@@ -2,30 +2,29 @@
 categories: [align_plots()]
 ---
 
-# Plot Composer Basics
+# Plot Composer - Basics
 
 ```{r}
 library(ggalign)
 ```
 
 ```{r}
-library(ggplot2)
-p1 <- ggplot(mtcars) + 
-  geom_point(aes(mpg, disp)) + 
-  ggtitle('Plot 1')
+p1 <- ggplot(mtcars) +
+    geom_point(aes(mpg, disp)) +
+    ggtitle("Plot 1")
 
-p2 <- ggplot(mtcars) + 
-  geom_boxplot(aes(gear, disp, group = gear)) + 
-  ggtitle('Plot 2')
+p2 <- ggplot(mtcars) +
+    geom_boxplot(aes(gear, disp, group = gear)) +
+    ggtitle("Plot 2")
 
-p3 <- ggplot(mtcars) + 
-  geom_point(aes(hp, wt, colour = mpg)) + 
-  ggtitle('Plot 3')
+p3 <- ggplot(mtcars) +
+    geom_point(aes(hp, wt, colour = mpg)) +
+    ggtitle("Plot 3")
 
-p4 <- ggplot(mtcars) + 
-  geom_bar(aes(gear)) + 
-  facet_wrap(~cyl) + 
-  ggtitle('Plot 4')
+p4 <- ggplot(mtcars) +
+    geom_bar(aes(gear)) +
+    facet_wrap(~cyl) +
+    ggtitle("Plot 4")
 ```
 
 Combine plots directly:
@@ -57,7 +56,7 @@ Works for multiple plots:
 align_plots(p1, p2, p3, p4, ncol = 2, widths = c(2, 1))
 ```
 
-Set space:
+Add empty plot:
 
 ```{r}
 align_plots(p1, NULL, p2)
