@@ -54,17 +54,6 @@ guide_axis_trunc <- function(lower = NULL, upper = NULL) {
 #| fig-width: 12
 #| fig-height: 8
 ggheatmap(summarized$num, filling = FALSE) -
-    # set default theme
-    scheme_theme(
-        plot.margin = margin(),
-        panel.background = element_blank(),
-        plot.background = element_blank(),
-        axis.title = element_text(size = 12, face = "bold"),
-        axis.text = element_text(size = 12),
-        legend.text = element_text(size = 12),
-        legend.title = element_text(size = 12, face = "bold"),
-        plot.title = element_text(size = 16, face = "bold")
-    ) +
     # main plot
     scheme_data(function(data) {
         data$average <- summarized$ave[cbind(data$.row_index, data$.column_index)]
@@ -74,18 +63,7 @@ ggheatmap(summarized$num, filling = FALSE) -
     scale_fill_viridis_c(name = "Mean") +
     scale_size_continuous(name = "Proportion", range = c(1, 4)) +
     theme_bw() +
-    theme(
-        axis.text.x = element_text(angle = -60, hjust = 0),
-        axis.text.y = element_text(size = 10),
-        strip.text.y.right = element_blank(),
-        plot.margin = margin(),
-        strip.background = element_rect(colour = NA),
-        strip.text = element_text(face = "bold"),
-        axis.title = element_text(size = 12, face = "bold"),
-        axis.text = element_text(size = 12),
-        legend.text = element_text(size = 12),
-        legend.title = element_text(size = 12, face = "bold"),
-    ) +
+    theme(axis.text.x = element_text(angle = -60, hjust = 0)) +
     ggh4x::facet_grid2(
         strip = ggh4x::strip_themed(
             clip = "off",
@@ -170,9 +148,7 @@ ggheatmap(summarized$num, filling = FALSE) -
     theme(
         plot.margin = margin(t = 0.3, b = 0.3, r = 0.15, unit = "npc"),
         panel.border = element_blank(),
-        axis.line = element_line(
-            arrow = grid::arrow(length = unit(0.05, "inches"))
-        )
+        axis.line = element_line(arrow = grid::arrow(length = unit(0.05, "inches")))
     ) +
 
     # right -----------------------------------------
@@ -236,7 +212,6 @@ ggheatmap(summarized$num, filling = FALSE) -
         axis.text.x = element_text(angle = -60, hjust = 0, size = 12),
         strip.clip = "off",
         strip.text = element_text(size = 10, face = "bold"),
-        # strip.text.y.right = element_blank(),
         strip.background = element_rect(color = NA)
     ) +
     ggh4x::facet_grid2(
