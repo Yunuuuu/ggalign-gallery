@@ -26,16 +26,6 @@ mat2 <- matrix(
 This example demonstrates how to create a tanglegram—a paired visualization of
 two dendrogram-aligned with cross-links between related elements.
 ```{r}
-stack_crossh() +
-    align_dendro(data = mat1) +
-    scale_x_reverse() +
-    cross_link(link_line()) +
-    align_dendro(data = mat2) -
-    no_expansion("x") -
-    theme(plot.margin = margin())
-```
-
-```{r}
 #| classes: preview-image
 stack_crossh() +
     align_dendro(aes(color = branch), data = mat1, k = 3L) +
