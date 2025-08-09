@@ -20,14 +20,12 @@ summarizes the fraction of a genomic window covered by regions—providing a
 smoother representation of local enrichment.
 
 ```{r}
-#| code-fold: true
 library(ggalign)
 ```
 
 The data comes from the `circlize` package and includes both hyper- and
 hypo-methylated DMRs in the human genome.
 ```{r}
-#| code-fold: true
 load(system.file(package = "circlize", "extdata", "DMR.RData", mustWork = TRUE))
 bed_data <- dplyr::bind_rows(hyper = DMR_hyper, hypo = DMR_hypo, .id = "DMR") |>
     dplyr::relocate(DMR, .after = dplyr::last_col())
