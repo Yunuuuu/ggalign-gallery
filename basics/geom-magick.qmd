@@ -35,5 +35,6 @@ ggplot(d, aes(x, y)) +
     geom_magick(
         aes(image = image, fill = fill, alpha = alpha),
         size = 12, show.legend = FALSE
-    )
+    ) + 
+    coord_cartesian(clip = "off")
 ```
