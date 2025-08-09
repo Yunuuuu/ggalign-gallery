@@ -109,7 +109,7 @@ circle_genomic(
                 split(d, ~DMR), function(dd) genomic_dist(dd)
             ))
             d$middle <- (d$start + d$end) / 2
-            dplyr::rename(d, seqnames = chr)
+            d
         }
     ) +
     scale_color_brewer(
@@ -143,6 +143,5 @@ circle_genomic(
             d
         }
     ) &
-    facet_sector(vars(seqnames), drop = FALSE) &
     theme(panel.background = element_rect(color = "black", fill = NA))
 ```
