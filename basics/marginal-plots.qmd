@@ -13,6 +13,7 @@ box plots, or other visual representations.
 library(ggalign)
 ```
 
+## Scatter Plot with Marginal Densities
 ```{r}
 ggside(mpg, aes(displ, hwy, colour = class)) -
     scheme_theme(theme_bw()) +
@@ -31,6 +32,49 @@ ggside(mpg, aes(displ, hwy, colour = class)) -
     )
 ```
 
+
+## Facetted Marginal Plots
+```{r}
+i2 <- iris
+i2$Group <- rep(c("Group1", "Group2"), 75)
+ggside(i2, aes(Sepal.Width, Sepal.Length, color = Species)) +
+    geom_point(size = 2) +
+    facet_grid(Species ~ Group) +
+    theme(
+        strip.background = element_blank(),
+        strip.text = element_blank()
+    ) +
+    anno_top(size = 0.3) +
+    ggalign() +
+    geom_density(aes(Sepal.Width, y = after_stat(density), colour = Species),
+        position = "stack"
+    ) +
+    facet_grid(cols = vars(Group)) +
+    theme(
+        strip.text = element_text(margin = margin(5, 5, 5, 5)),
+        strip.background = element_rect(fill = "grey")
+    ) +
+    anno_right(size = 0.3) +
+    ggalign() +
+    geom_density(aes(x = after_stat(density), Sepal.Length, colour = Species),
+        position = "stack"
+    ) +
+    facet_grid(rows = vars(Species)) +
+    theme(
+        strip.text = element_text(margin = margin(5, 5, 5, 5)),
+        strip.background = element_rect(fill = "grey")
+    ) -
+    quad_scope(scheme_theme(theme_bw()), "tri") &
+    scale_color_brewer(palette = "Dark2", guide = "none") &
+    scale_x_continuous(breaks = scales::pretty_breaks(3L)) &
+    scale_y_continuous(breaks = scales::pretty_breaks(3L)) &
+    theme(
+        axis.text = element_text(),
+        axis.title = element_text(face = "bold")
+    )
+```
+
+## Reproducing ggpubr Marginal Plot Examples
 Reproduce cases in [Add marginal plots](https://www.sthda.com/english/articles/24-ggpubr-publication-ready-plots/78-perfect-scatter-plots-with-correlation-and-marginal-histograms/) of `ggpubr` post.
 
 ```{r}
