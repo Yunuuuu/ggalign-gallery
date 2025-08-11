@@ -58,7 +58,7 @@ circle_genomic(
     plot_ideogram() +
     scale_x_continuous(
         breaks = scales::breaks_pretty(2),
-        labels = scales::label_bytes()
+        labels = scales::label_bytes("MB")
     ) +
     guides(
         r = "none", r.sec = "axis",
