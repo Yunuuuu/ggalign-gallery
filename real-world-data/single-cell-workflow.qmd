@@ -1,20 +1,24 @@
-#  Pan-cancer analysis of cell type distribution and abundance at single-cell resolution
+---
+categories: [ggheatmap(), ggmark()]
+---
+
+# Pan-cancer analysis of cell type distribution and abundance at single-cell resolution
 
 ```{r}
 library(ggalign)
 ```
 
 The raw data were obtained from
-https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210347. The preprocessing
-workflow is documented in detail here:
+<https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210347>. A detailed description of the preprocessing workflow can be found here:
 <https://github.com/Yunuuuu/ggalign-research/blob/main/Figure%206-data-preprocess.qmd>.
+The processed dataset can be downloaded from `r datasource_md_link()`.
 
 ## Load processed data
 ```{r}
-umap_subset <- readRDS("rawdata/single-cell-workflow/umap_subset.rds")
-summarized <- readRDS("rawdata/single-cell-workflow/summarized.rds")
-umap <- readRDS("rawdata/single-cell-workflow/umap.rds")
-clidata <- readRDS("rawdata/single-cell-workflow/clidata.rds")
+umap_subset <- readRDS(datasource("umap_subset.rds"))
+summarized <- readRDS(datasource("summarized.rds"))
+umap <- readRDS(datasource("umap.rds"))
+clidata <- readRDS(datasource("clidata.rds"))
 ```
 
 ## Helper: truncated axis guide
