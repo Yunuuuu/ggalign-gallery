@@ -13,8 +13,8 @@ set.seed(123)
 # Prepare heatmap matrix
 mat <- matrix(
     rnorm(90, mean = 0, sd = 2),
-    nrow = 10, ncol = 10,
-    dimnames = list(paste0("G", 1:10), paste0("S", 1:10))
+    nrow = 9, ncol = 10,
+    dimnames = list(paste0("G", 1:9), paste0("S", 1:10))
 )
 ```
 
