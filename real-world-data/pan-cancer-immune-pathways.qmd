@@ -3,14 +3,11 @@ categories: [circle_discrete()]
 ---
 
 # Disturbance of Immune-Related Pathways between Normal and Tumor Tissues in Pan-cancer
-Data was downloaded from https://pmc.ncbi.nlm.nih.gov/articles/PMC9856581/#app1-cancers-15-00342
-
-We randomly selected 5 pathways for simplicity. The data preparation code is
-collapsed in the source but can be expanded for inspection.
+Data was downloaded from
+<https://pmc.ncbi.nlm.nih.gov/articles/PMC9856581/#app1-cancers-15-00342>. We
+randomly selected 5 pathways for simplicity.
 ```{r}
-#| code-fold: true
 #| output: false
-# Read data from the supplementary Excel file
 data <- readxl::read_xlsx("rawdata/pan-cancer-immune-pathways.xlsx", skip = 1L)
 set.seed(3L)
 

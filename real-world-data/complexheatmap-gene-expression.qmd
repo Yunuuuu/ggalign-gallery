@@ -12,10 +12,8 @@ package to reproduce the multi-panel gene expression heatmap from
 library(ggalign)
 ```
 
-We load the example dataset and process it for visualization, the data
-preparation code is collapsed in the source but can be expanded for inspection.
+We load the example dataset from `ComplexHeatmap` and process it for visualization.
 ```{r}
-#| code-fold: true
 expr <- readRDS(system.file(
     "extdata", "gene_expression.rds",
     package = "ComplexHeatmap"
