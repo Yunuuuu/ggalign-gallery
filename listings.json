@@ -16,6 +16,15 @@
     ]
   },
   {
+    "listing": "/advanced.html",
+    "items": [
+      "/advanced/mark.html",
+      "/advanced/upset.html",
+      "/advanced/phylogenetic-trees.html",
+      "/advanced/tanglegram.html"
+    ]
+  },
+  {
     "listing": "/real-world-data.html",
     "items": [
       "/real-world-data/pan-cancer-immune-pathways.html",
@@ -24,14 +33,6 @@
       "/real-world-data/measles-vaccine-heatmap.html",
       "/real-world-data/tcga-laml-oncoplot.html",
       "/real-world-data/single-cell-workflow.html"
-    ]
-  },
-  {
-    "listing": "/advanced.html",
-    "items": [
-      "/advanced/mark.html",
-      "/advanced/upset.html",
-      "/advanced/tanglegram.html"
     ]
   },
   {
@@ -50,6 +51,7 @@
       "/basics/geom-magick.html",
       "/advanced/mark.html",
       "/advanced/upset.html",
+      "/advanced/phylogenetic-trees.html",
       "/advanced/tanglegram.html",
       "/real-world-data/pan-cancer-immune-pathways.html",
       "/real-world-data/genomic-density-and-rainfall-plot.html",
