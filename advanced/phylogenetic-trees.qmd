@@ -1,0 +1,89 @@
+---
+categories: [circle_discrete(), align_phylo()]
+---
+
+# Visualizing Phylogenetic Trees
+`ggalign` provides direct support for `phylo` objects from the `ape` package,
+allowing you to visualize phylogenetic trees alongside other data in an
+integrated way.
+
+```{r}
+library(ggalign)
+```
+
+```{r}
+n <- 100
+p <- 3
+set.seed(3)
+tr <- ape::rcoal(n)
+x <- matrix(runif(p * n), n, p)
+```
+
+Note that you can also use `stack_discrete()` to display the tree in a stacked
+arrangement rather than in a radial layout. For this documentation, we
+illustrate examples using `circle_discrete()` as it is the most commonly used
+approach.
+
+## Basic phylogenetic tree alignment
+```{r}
+circle_discrete(x,
+    radial = coord_radial(inner.radius = 0.2, rotate.angle = TRUE)
+) +
+    align_phylo(tr) +
+    ggalign() +
+    geom_tile(aes(y = .column_index, fill = value)) +
+    scale_fill_viridis_c()
+```
+
+The underlying data passed to `align_phylo()` includes both tip and internal node
+information. Edge data is stored as a ggalign attribute, and you can retrieve it
+using `ggalign_attr()`. See `?fortify_data_frame.phylo` for details.
+
+```{r}
+circle_discrete(x,
+    radial = coord_radial(inner.radius = 0.2, rotate.angle = TRUE)
+) +
+    align_phylo(tr) +
+    geom_point() +
+    ggalign() +
+    geom_tile(aes(y = .column_index, fill = value)) +
+    scale_fill_viridis_c() &
+    scale_y_continuous(breaks = NULL)
+```
+
+## Grouping by clades
+```{r}
+groups <- cutree(as.hclust(tr), k = 3)
+```
+
+By default, `align_phylo()` will add a single phylogenetic tree, and `align_group()`
+can then facet the data by clade:
+```{r}
+circle_discrete(x,
+    radial = coord_radial(inner.radius = 0.2, rotate.angle = TRUE)
+) +
+    align_phylo(tr, mapping = aes(color = clade)) +
+    geom_point() +
+    align_group(groups) +
+    ggalign() +
+    geom_tile(aes(y = .column_index, fill = value)) +
+    scale_fill_viridis_c() &
+    scale_y_continuous(breaks = NULL)
+```
+
+## Splitting into multiple subtrees
+If groups are already set before adding the phylogenetic tree, you can set 
+`split = TRUE` in `align_phylo()` to automatically split the tree into multiple
+subtrees, one for each group.
+```{r}
+circle_discrete(x,
+    radial = coord_radial(inner.radius = 0.2, rotate.angle = TRUE)
+) +
+    align_group(groups) +
+    align_phylo(tr, mapping = aes(color = clade), split = TRUE) +
+    geom_point() +
+    ggalign() +
+    geom_tile(aes(y = .column_index, fill = value)) +
+    scale_fill_viridis_c() &
+    scale_y_continuous(breaks = NULL)
+```
