@@ -59,6 +59,7 @@ groups <- cutree(as.hclust(tr), k = 3)
 By default, `align_phylo()` will add a single phylogenetic tree, and `align_group()`
 can then facet the data by clade:
 ```{r}
+#| classes: preview-image
 circle_discrete(x,
     radial = coord_radial(inner.radius = 0.2, rotate.angle = TRUE)
 ) +
