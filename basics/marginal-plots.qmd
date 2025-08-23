@@ -17,6 +17,7 @@ library(ggalign)
 ```{r}
 ggside(mpg, aes(displ, hwy, colour = class)) -
     scheme_theme(theme_bw()) +
+    layout_theme(panel.border = element_blank()) +
     geom_point(size = 2) +
     # initialize top annotation
     anno_top(size = 0.3) +
