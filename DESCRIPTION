@@ -5,7 +5,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Yun", "Peng", , "yunyunp96@163.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-2801-3332"))
 Description: What the package does (one paragraph).
-URL: https://yunuuuu.github.io/ggalign-book/
+URL: https://yunuuuu.github.io/ggalign-gallery/
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
