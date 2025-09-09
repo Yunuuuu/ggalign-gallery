@@ -9,13 +9,22 @@ For demonstration purposes, we randomly selected five pathways.
 The dataset can be downloaded from `r datasource_md_link()`.
 
 ```{r}
-#| output: false
-data <- readxl::read_xlsx(datasource("pan-cancer-immune-pathways.xlsx"), skip = 1L)
-set.seed(3L)
+#| echo: false
+#| output: asis
+data <- datasource("pan-cancer-immune-pathways.xlsx")
+cat(knitr::knit_child(text = c(
+    "```{r}",
+    sprintf("data <- readxl::read_xlsx(\"%s\", skip = 1L)", data),
+    "```",
+    ""
+), quiet = TRUE))
+```
 
+```{r}
+#| output: false
+set.seed(3L)
 # Randomly select 5 pathways (rows 2–18 cover the main data)
 selected <- sample(2:18, 5)
-
 # Extract logFC and adjusted p-values for the selected pathways
 logFC <- data[selected, c(1, which(as.character(data[1, ]) == "logFC"))]
 adj.P <- data[selected, c(1, which(as.character(data[1, ]) == "adj.P"))]

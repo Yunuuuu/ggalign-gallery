@@ -5,6 +5,10 @@ project:
 
 engine: knitr
 
+params:
+  repo-url: https://github.com/Yunuuuu/ggalign-gallery
+  repo-branch: main
+
 website:
   title: gallery
   favicon: cover.png
@@ -18,7 +22,7 @@ website:
     title: ggalign gallery
 
   comments:
-    giscus: 
+    giscus:
       repo: Yunuuuu/ggalign-gallery
       repo-id: R_kgDOPU41Yg
       category: Announcements

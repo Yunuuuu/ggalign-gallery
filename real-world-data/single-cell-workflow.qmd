@@ -9,16 +9,28 @@ library(ggalign)
 ```
 
 The raw data were obtained from
-<https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210347>. A detailed description of the preprocessing workflow can be found here:
+<https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210347>. A detailed
+description of the preprocessing workflow can be found here:
 <https://github.com/Yunuuuu/ggalign-research/blob/main/Figure%206-data-preprocess.qmd>.
 The processed dataset can be downloaded from `r datasource_md_link()`.
 
 ## Load processed data
 ```{r}
-umap_subset <- readRDS(datasource("umap_subset.rds"))
-summarized <- readRDS(datasource("summarized.rds"))
-umap <- readRDS(datasource("umap.rds"))
-clidata <- readRDS(datasource("clidata.rds"))
+#| echo: false
+#| output: asis
+umap_subset <- datasource("umap_subset.rds")
+summarized <- datasource("summarized.rds")
+umap <- datasource("umap.rds")
+clidata <- datasource("clidata.rds")
+cat(knitr::knit_child(text = c(
+    "```{r}",
+    sprintf('umap_subset <- readRDS("%s")', umap_subset),
+    sprintf('summarized <- readRDS("%s")', summarized),
+    sprintf('umap <- readRDS("%s")', umap),
+    sprintf('clidata <- readRDS("%s")', clidata),
+    "```",
+    ""
+), quiet = TRUE))
 ```
 
 ## Helper: truncated axis guide
