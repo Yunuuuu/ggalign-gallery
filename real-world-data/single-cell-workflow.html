@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="dcterms.date" content="2025-09-08">
+<meta name="dcterms.date" content="2025-09-09">
 <title>single-cell-workflow – gallery</title>
 <style>
 code{white-space: pre-wrap;}
@@ -372,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 8, 2025</p>
+      <p class="date">September 9, 2025</p>
     </div>
   </div>
   
@@ -391,13 +391,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     element_polygon</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The raw data were obtained from <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210347" class="uri">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210347</a>. A detailed description of the preprocessing workflow can be found here: <a href="https://github.com/Yunuuuu/ggalign-research/blob/main/Figure%206-data-preprocess.qmd" class="uri">https://github.com/Yunuuuu/ggalign-research/blob/main/Figure%206-data-preprocess.qmd</a>. The processed dataset can be downloaded from <a href="https://github.com/Yunuuuu/ggalign-gallery/tree/main/rawdata/real-world-data/single-cell-workflow">Data Repository</a>.</p>
+<p>The raw data were obtained from <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210347" class="uri">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210347</a>. A detailed description of the preprocessing workflow can be found here: <a href="https://github.com/Yunuuuu/ggalign-research/blob/main/Figure%206-data-preprocess.qmd" class="uri">https://github.com/Yunuuuu/ggalign-research/blob/main/Figure%206-data-preprocess.qmd</a>. The processed dataset can be downloaded from <a href="https://github.com/Yunuuuu/ggalign-gallery/tree/main/real-world-data/datasource/single-cell-workflow">Data Repository</a>.</p>
 <section id="load-processed-data" class="level2"><h2 class="anchored" data-anchor-id="load-processed-data">Load processed data</h2>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">umap_subset</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">readRDS</a></span><span class="op">(</span><span class="fu">datasource</span><span class="op">(</span><span class="st">"umap_subset.rds"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">summarized</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">readRDS</a></span><span class="op">(</span><span class="fu">datasource</span><span class="op">(</span><span class="st">"summarized.rds"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">umap</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">readRDS</a></span><span class="op">(</span><span class="fu">datasource</span><span class="op">(</span><span class="st">"umap.rds"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">clidata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">readRDS</a></span><span class="op">(</span><span class="fu">datasource</span><span class="op">(</span><span class="st">"clidata.rds"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">umap_subset</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">readRDS</a></span><span class="op">(</span><span class="st">"real-world-data/datasource/single-cell-workflow/umap_subset.rds"</span><span class="op">)</span></span>
+<span><span class="va">summarized</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">readRDS</a></span><span class="op">(</span><span class="st">"real-world-data/datasource/single-cell-workflow/summarized.rds"</span><span class="op">)</span></span>
+<span><span class="va">umap</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">readRDS</a></span><span class="op">(</span><span class="st">"real-world-data/datasource/single-cell-workflow/umap.rds"</span><span class="op">)</span></span>
+<span><span class="va">clidata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">readRDS</a></span><span class="op">(</span><span class="st">"real-world-data/datasource/single-cell-workflow/clidata.rds"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="helper-truncated-axis-guide" class="level2"><h2 class="anchored" data-anchor-id="helper-truncated-axis-guide">Helper: truncated axis guide</h2>
 <p>The following function creates an axis guide that optionally truncates at the lower and/or upper ends:</p>

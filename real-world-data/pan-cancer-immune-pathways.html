@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="dcterms.date" content="2025-09-08">
+<meta name="dcterms.date" content="2025-09-09">
 <title>pan-cancer-immune-pathways – gallery</title>
 <style>
 code{white-space: pre-wrap;}
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 8, 2025</p>
+      <p class="date">September 9, 2025</p>
     </div>
   </div>
   
@@ -383,14 +383,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header><section id="disturbance-of-immune-related-pathways-between-normal-and-tumor-tissues-in-pan-cancer" class="level1"><h1>Disturbance of Immune-Related Pathways between Normal and Tumor Tissues in Pan-cancer</h1>
 <p>The data were obtained from<br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9856581/#app1-cancers-15-00342" class="uri">https://pmc.ncbi.nlm.nih.gov/articles/PMC9856581/#app1-cancers-15-00342</a>.<br>
 For demonstration purposes, we randomly selected five pathways.<br>
-The dataset can be downloaded from <a href="https://github.com/Yunuuuu/ggalign-gallery/tree/main/rawdata/real-world-data/pan-cancer-immune-pathways">Data Repository</a>.</p>
+The dataset can be downloaded from <a href="https://github.com/Yunuuuu/ggalign-gallery/tree/main/real-world-data/datasource/pan-cancer-immune-pathways">Data Repository</a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">readxl</span><span class="fu">::</span><span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_xlsx</a></span><span class="op">(</span><span class="fu">datasource</span><span class="op">(</span><span class="st">"pan-cancer-immune-pathways.xlsx"</span><span class="op">)</span>, skip <span class="op">=</span> <span class="fl">1L</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">3L</span><span class="op">)</span></span>
-<span></span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">readxl</span><span class="fu">::</span><span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_xlsx</a></span><span class="op">(</span><span class="st">"real-world-data/datasource/pan-cancer-immune-pathways/pan-cancer-immune-pathways.xlsx"</span>, skip <span class="op">=</span> <span class="fl">1L</span><span class="op">)</span></span>
+<span><span class="co">#&gt; New names:</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...3`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...5`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...7`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...9`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...11`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...13`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...15`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...17`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...19`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...21`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...23`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...25`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...27`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...29`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...31`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...33`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...35`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...37`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...39`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...41`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...43`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...45`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...47`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...49`</span></span>
+<span><span class="co">#&gt; • `` -&gt; `...51`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">3L</span><span class="op">)</span></span>
 <span><span class="co"># Randomly select 5 pathways (rows 2–18 cover the main data)</span></span>
 <span><span class="va">selected</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">2</span><span class="op">:</span><span class="fl">18</span>, <span class="fl">5</span><span class="op">)</span></span>
-<span></span>
 <span><span class="co"># Extract logFC and adjusted p-values for the selected pathways</span></span>
 <span><span class="va">logFC</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[</span><span class="va">selected</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">data</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span><span class="op">)</span> <span class="op">==</span> <span class="st">"logFC"</span><span class="op">)</span><span class="op">)</span><span class="op">]</span></span>
 <span><span class="va">adj.P</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[</span><span class="va">selected</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">data</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span><span class="op">)</span> <span class="op">==</span> <span class="st">"adj.P"</span><span class="op">)</span><span class="op">)</span><span class="op">]</span></span>
@@ -407,7 +433,7 @@ The dataset can be downloaded from <a href="https://github.com/Yunuuuu/ggalign-g
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Yunuuuu/ggalign">ggalign</a></span><span class="op">)</span></span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Yunuuuu/ggalign">ggalign</a></span><span class="op">)</span></span>
 <span><span class="co">#&gt; Loading required package: ggplot2</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Attaching package: 'ggalign'</span></span>
@@ -416,7 +442,7 @@ The dataset can be downloaded from <a href="https://github.com/Yunuuuu/ggalign-g
 <span><span class="co">#&gt;     element_polygon</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/circle_layout.html">circle_discrete</a></span><span class="op">(</span><span class="va">logFC</span>,</span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/circle_layout.html">circle_discrete</a></span><span class="op">(</span><span class="va">logFC</span>,</span>
 <span>    radial <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_radial.html">coord_radial</a></span><span class="op">(</span>start <span class="op">=</span> <span class="va">pi</span> <span class="op">/</span> <span class="fl">2</span>, end <span class="op">=</span> <span class="va">pi</span> <span class="op">*</span> <span class="fl">2</span>, expand <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>,</span>
 <span>    sector_spacing <span class="op">=</span> <span class="fl">5</span> <span class="op">*</span> <span class="va">pi</span> <span class="op">/</span> <span class="fl">180</span>,</span>
 <span>    theme <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span>l <span class="op">=</span> <span class="fl">5</span>, t <span class="op">=</span> <span class="fl">5</span>, b <span class="op">=</span> <span class="fl">6</span>, unit <span class="op">=</span> <span class="st">"mm"</span><span class="op">)</span><span class="op">)</span></span>
@@ -443,7 +469,7 @@ The dataset can be downloaded from <a href="https://github.com/Yunuuuu/ggalign-g
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.theta <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="pan-cancer-immune-pathways_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="pan-cancer-immune-pathways_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
