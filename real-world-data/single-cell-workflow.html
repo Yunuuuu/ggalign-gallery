@@ -384,12 +384,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header><section id="pan-cancer-analysis-of-cell-type-distribution-and-abundance-at-single-cell-resolution" class="level1"><h1>Pan-cancer analysis of cell type distribution and abundance at single-cell resolution</h1>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Yunuuuu/ggalign">ggalign</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Loading required package: ggplot2</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Attaching package: 'ggalign'</span></span>
-<span><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     element_polygon</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; Loading required package: ggplot2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The raw data were obtained from <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210347" class="uri">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210347</a>. A detailed description of the preprocessing workflow can be found here: <a href="https://github.com/Yunuuuu/ggalign-research/blob/main/Figure%206-data-preprocess.qmd" class="uri">https://github.com/Yunuuuu/ggalign-research/blob/main/Figure%206-data-preprocess.qmd</a>. The processed dataset can be downloaded from <a href="https://github.com/Yunuuuu/ggalign-gallery/tree/main/real-world-data/datasource/single-cell-workflow">Data Repository</a>.</p>
 <section id="load-processed-data" class="level2"><h2 class="anchored" data-anchor-id="load-processed-data">Load processed data</h2>
@@ -497,15 +492,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>            <span class="op">}</span></span>
 <span>            <span class="va">ans</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">ans</span><span class="op">)</span></span>
 <span>            <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element_grob.html">element_grob</a></span><span class="op">(</span></span>
-<span>                <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/element_polygon.html">element_polygon</a></span><span class="op">(</span></span>
+<span>                <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_polygon</a></span><span class="op">(</span></span>
 <span>                    fill <span class="op">=</span> <span class="fu">RColorBrewer</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">brewer.pal</a></span><span class="op">(</span><span class="fl">6</span>, <span class="st">"Set2"</span><span class="op">)</span>,</span>
 <span>                    color <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>                    linewidth <span class="op">=</span> <span class="fl">0.5</span>,</span>
 <span>                    linetype <span class="op">=</span> <span class="fl">1</span>,</span>
-<span>                    alpha <span class="op">=</span> <span class="cn">NA</span>,</span>
-<span>                    lineend <span class="op">=</span> <span class="st">"butt"</span>,</span>
-<span>                    linejoin <span class="op">=</span> <span class="st">"round"</span>,</span>
-<span>                    linemitre <span class="op">=</span> <span class="fl">10</span></span>
+<span>                    linejoin <span class="op">=</span> <span class="st">"round"</span></span>
 <span>                <span class="op">)</span>,</span>
 <span>                x <span class="op">=</span> <span class="va">ans</span><span class="op">$</span><span class="va">x</span>, y <span class="op">=</span> <span class="va">ans</span><span class="op">$</span><span class="va">y</span>,</span>
 <span>                id.lengths <span class="op">=</span> <span class="fu">vctrs</span><span class="fu">::</span><span class="fu"><a href="https://vctrs.r-lib.org/reference/vec-rep.html">vec_rep</a></span><span class="op">(</span><span class="fl">4L</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">ans</span><span class="op">)</span> <span class="op">/</span> <span class="fl">4L</span><span class="op">)</span>,</span>
@@ -540,7 +532,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/ggmark.html">ggmark</a></span><span class="op">(</span></span>
 <span>        <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/mark_tetragon.html">mark_tetragon</a></span><span class="op">(</span></span>
 <span>            .element <span class="op">=</span> <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/element_vec.html">element_vec_rep_each</a></span><span class="op">(</span></span>
-<span>                <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/element_polygon.html">element_polygon</a></span><span class="op">(</span></span>
+<span>                <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_polygon</a></span><span class="op">(</span></span>
 <span>                    fill <span class="op">=</span> <span class="fu">RColorBrewer</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">brewer.pal</a></span><span class="op">(</span><span class="fl">6</span>, <span class="st">"Set2"</span><span class="op">)</span>,</span>
 <span>                    colour <span class="op">=</span> <span class="cn">NA</span></span>
 <span>                <span class="op">)</span>,</span>
@@ -566,7 +558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"UMAP"</span><span class="op">)</span> <span class="op">+</span></span>
 <span></span>
 <span>    <span class="co"># box plot</span></span>
-<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/ggmark.html">ggmark</a></span><span class="op">(</span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/mark_tetragon.html">mark_tetragon</a></span><span class="op">(</span>.element <span class="op">=</span> <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/element_polygon.html">element_polygon</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/ggmark.html">ggmark</a></span><span class="op">(</span><span class="fu"><a href="https://yunuuuu.github.io/ggalign/reference/mark_tetragon.html">mark_tetragon</a></span><span class="op">(</span>.element <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_polygon</a></span><span class="op">(</span></span>
 <span>        fill <span class="op">=</span> <span class="fu">RColorBrewer</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">brewer.pal</a></span><span class="op">(</span><span class="fl">6</span>, <span class="st">"Set2"</span><span class="op">)</span>,</span>
 <span>        colour <span class="op">=</span> <span class="cn">NA</span></span>
 <span>    <span class="op">)</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span> <span class="op">+</span></span>
