@@ -141,10 +141,7 @@ ggheatmap(summarized$num, filling = FALSE) -
                     color = NA,
                     linewidth = 0.5,
                     linetype = 1,
-                    alpha = NA,
-                    lineend = "butt",
-                    linejoin = "round",
-                    linemitre = 10
+                    linejoin = "round"
                 ),
                 x = ans$x, y = ans$y,
                 id.lengths = vctrs::vec_rep(4L, nrow(ans) / 4L),
