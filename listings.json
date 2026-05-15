@@ -1,11 +1,18 @@
 [
   {
-    "listing": "/advanced.html",
+    "listing": "/basics.html",
     "items": [
-      "/advanced/mark.html",
-      "/advanced/upset.html",
-      "/advanced/phylogenetic-trees.html",
-      "/advanced/tanglegram.html"
+      "/basics/circle.html",
+      "/basics/complexheatmap.html",
+      "/basics/heatmap.html",
+      "/basics/heatmap-with-different-shape.html",
+      "/basics/marginal-plots.html",
+      "/basics/plot-composer-basics.html",
+      "/basics/plot-composer-inset.html",
+      "/basics/plot-composer-wrap.html",
+      "/basics/plot-composer-tagging.html",
+      "/basics/stack-bar.html",
+      "/basics/geom-magick.html"
     ]
   },
   {
@@ -46,19 +53,12 @@
     ]
   },
   {
-    "listing": "/basics.html",
+    "listing": "/advanced.html",
     "items": [
-      "/basics/circle.html",
-      "/basics/complexheatmap.html",
-      "/basics/heatmap.html",
-      "/basics/heatmap-with-different-shape.html",
-      "/basics/marginal-plots.html",
-      "/basics/plot-composer-basics.html",
-      "/basics/plot-composer-inset.html",
-      "/basics/plot-composer-wrap.html",
-      "/basics/plot-composer-tagging.html",
-      "/basics/stack-bar.html",
-      "/basics/geom-magick.html"
+      "/advanced/mark.html",
+      "/advanced/upset.html",
+      "/advanced/phylogenetic-trees.html",
+      "/advanced/tanglegram.html"
     ]
   }
 ]
