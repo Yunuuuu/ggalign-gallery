@@ -26,15 +26,6 @@
     ]
   },
   {
-    "listing": "/advanced.html",
-    "items": [
-      "/advanced/mark.html",
-      "/advanced/upset.html",
-      "/advanced/phylogenetic-trees.html",
-      "/advanced/tanglegram.html"
-    ]
-  },
-  {
     "listing": "/basics.html",
     "items": [
       "/basics/circle.html",
@@ -48,6 +39,15 @@
       "/basics/plot-composer-tagging.html",
       "/basics/stack-bar.html",
       "/basics/geom-magick.html"
+    ]
+  },
+  {
+    "listing": "/advanced.html",
+    "items": [
+      "/advanced/mark.html",
+      "/advanced/upset.html",
+      "/advanced/phylogenetic-trees.html",
+      "/advanced/tanglegram.html"
     ]
   },
   {
