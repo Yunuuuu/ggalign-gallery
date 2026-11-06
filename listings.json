@@ -1,5 +1,14 @@
 [
   {
+    "listing": "/advanced.html",
+    "items": [
+      "/advanced/mark.html",
+      "/advanced/upset.html",
+      "/advanced/phylogenetic-trees.html",
+      "/advanced/tanglegram.html"
+    ]
+  },
+  {
     "listing": "/real-world-data.html",
     "items": [
       "/real-world-data/pan-cancer-immune-pathways.html",
@@ -11,12 +20,19 @@
     ]
   },
   {
-    "listing": "/advanced.html",
+    "listing": "/basics.html",
     "items": [
-      "/advanced/mark.html",
-      "/advanced/upset.html",
-      "/advanced/phylogenetic-trees.html",
-      "/advanced/tanglegram.html"
+      "/basics/circle.html",
+      "/basics/complexheatmap.html",
+      "/basics/heatmap.html",
+      "/basics/heatmap-with-different-shape.html",
+      "/basics/marginal-plots.html",
+      "/basics/plot-composer-basics.html",
+      "/basics/plot-composer-inset.html",
+      "/basics/plot-composer-wrap.html",
+      "/basics/plot-composer-tagging.html",
+      "/basics/stack-bar.html",
+      "/basics/geom-magick.html"
     ]
   },
   {
@@ -43,22 +59,6 @@
       "/real-world-data/measles-vaccine-heatmap.html",
       "/real-world-data/tcga-laml-oncoplot.html",
       "/real-world-data/single-cell-workflow.html"
-    ]
-  },
-  {
-    "listing": "/basics.html",
-    "items": [
-      "/basics/circle.html",
-      "/basics/complexheatmap.html",
-      "/basics/heatmap.html",
-      "/basics/heatmap-with-different-shape.html",
-      "/basics/marginal-plots.html",
-      "/basics/plot-composer-basics.html",
-      "/basics/plot-composer-inset.html",
-      "/basics/plot-composer-wrap.html",
-      "/basics/plot-composer-tagging.html",
-      "/basics/stack-bar.html",
-      "/basics/geom-magick.html"
     ]
   }
 ]
